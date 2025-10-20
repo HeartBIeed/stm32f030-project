@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	SystemClock_HSI_8MHz();
+	SystemClock_HSE_8MHz();
 
 	UART_init(9600u);
 
@@ -21,9 +21,17 @@ int main(void)
 
 	GPIOA->ODR |= (1 << 5);
 
+		usart1_ptr_str("HELLO");
 
  while( 1 )
 	{
+
+
+		usart1_ptr_str("1234ABCD");
+
+
+
+
 uint8_t data = usart1_recieve_byte();		
 
 		if ( data == '6')
@@ -40,7 +48,7 @@ uint8_t data = usart1_recieve_byte();
 		
 		}		
 
-		else if (data == 'S')
+		else if (data == 's')
 		{
 		usart1_ptr_str("string");
 		
