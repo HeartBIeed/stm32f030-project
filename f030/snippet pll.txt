@@ -1,0 +1,11 @@
+void PLL_enable()
+{
+RCC->CFGR = RCC->CFGR & (~RCC_CFGR_PLLMUL)|(RCC_CFGR_PLLMUL6); //set mul 6
+
+RCC->CR |= RCC_CR_PLLON;// PLL enable  
+while((RCC->CR & RCC_CR_PLLRDY)==0); // wait PLL is set
+
+RCC->CFGR |= RCC_CFGR_SW_PLL; //PLL as system clock
+while (RCC->CFGR & RCC_CFGR_SWS)!=RCC_CFGR_SWS_PLL; //wait switched SC to PLL
+
+}

@@ -13,7 +13,7 @@ INC_H     = inc
 SRC       := $(wildcard *.c)
 OBJ       := $(patsubst %.c,build/%.o,$(SRC))
 
-CFLAGS = -mcpu=$(MCPU) -g3 --specs=nano.specs -mthumb -mfloat-abi=soft -Wall -I$(INC_H)
+CFLAGS = -mcpu=$(MCPU) -g3 --specs=nano.specs -mthumb -mfloat-abi=soft -Wall -I$(INC_H) -DSTM32F401xC
 
 all: build/$(TARGET).hex
 

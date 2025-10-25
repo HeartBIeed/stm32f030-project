@@ -1,3 +1,0 @@
-system_stm32f401.c:3:6:SystemClock_HSI_8MHz	4	static
-system_stm32f401.c:16:6:SystemClock_HSE_8MHz	4	static
-system_stm32f401.c:29:6:SystemInit	8	static
