@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 void gpio_init()
 {
 	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; 
@@ -18,23 +19,23 @@ GPIOC->MODER |= ( 0x01 << (13*2)); //PC13 / output 01
 //	GPIOB->MODER |= ( 0x01 << (3*2)); //pb3 / output 01
 }
 
-void SystemInit()
-{
-    // Настройка тактирования сразу при старте
-    SystemClock_HSI_8MHz(); // или HSE
-}
 
 
 int main(void)
 {
-	SystemInit();
+//	for (volatile int i=0; i<100000; i++);
+
 	PLL_enable();
+
 	SysTick_init();
 	DWT_init();
-	UART_init(9600u);
+
+//	UART_init(9600u);
 	gpio_init();
 
-		CLEAR_BIT(GPIOC->ODR, (1 << 13));
+//		CLEAR_BIT(GPIOC->ODR, (1 << 13));
+GPIOC->BSRR = (1 << (13 + 16));
+			_delay_ms(5000);
 
 
  while( 1 )

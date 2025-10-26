@@ -13,7 +13,11 @@ INC_H     = inc
 SRC       := $(wildcard *.c)
 OBJ       := $(patsubst %.c,build/%.o,$(SRC))
 
-CFLAGS = -mcpu=$(MCPU) -g3 --specs=nano.specs -mthumb -mfloat-abi=soft -Wall -I$(INC_H) -DSTM32F401xC
+SYS_SRC   = Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+SYS_OBJ   = build/system_stm32f4xx.o
+
+CFLAGS = -mcpu=$(MCPU) -g3 --specs=nano.specs -mthumb -mfloat-abi=soft -Wall \
+ -I$(INC_H) -I$(INCLUDE1) -I$(INCLUDE2) -DSTM32F401xC -std=gnu11
 
 all: build/$(TARGET).hex
 
@@ -21,15 +25,20 @@ build:
 	mkdir -p build
 
 build/%.o: %.c | build
-	$(CC) $(CFLAGS) -I$(INCLUDE1) -I$(INCLUDE2) -I$(INC_H) -std=gnu11 \
-	-c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -o $@ $<
+	$(CC) $(CFLAGS) -c -O0 -ffunction-sections -fdata-sections -fstack-usage -o $@ $<
+
+# system_stm32f4xx.c 
+$(SYS_OBJ): $(SYS_SRC)
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(STARTUP).o: $(ST_INCL)/$(STARTUP).s | build
-	$(CC) $(CFLAGS) -DDEBUG -c -x assembler-with-cpp -o $@ $<
+	$(CC) $(CFLAGS) -c -x assembler-with-cpp -o $@ $<
 
-build/$(TARGET).elf: $(OBJ) $(STARTUP).o $(LOADER) Makefile
-	$(CC) -o $@ $(OBJ) $(STARTUP).o -mcpu=$(MCPU) --specs=nosys.specs -T"$(LOADER)" \
-	-Wl,-Map=build/$(TARGET).map -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb \
+build/$(TARGET).elf: $(OBJ) $(SYS_OBJ) $(STARTUP).o $(LOADER)
+	$(CC) -o $@ $(OBJ) $(SYS_OBJ) $(STARTUP).o -mcpu=$(MCPU) \
+	--specs=nosys.specs -T"$(LOADER)" -Wl,-Map=build/$(TARGET).map \
+	-Wl,--gc-sections -static -mfloat-abi=soft -mthumb \
 	-Wl,--start-group -lc -lm -Wl,--end-group
 	arm-none-eabi-size $@
 
