@@ -15,6 +15,7 @@ void SystemClock_HSI_8MHz(void)
 
 void SystemClock_HSE(void) // 25 MHz BlackPill
     {
+    RCC->CR |= RCC_CR_HSEBYP;  // включаем bypass
     RCC->CR |=RCC_CR_HSEON; // enable HSE
     while(!(RCC->CR & RCC_CR_HSERDY)); // wait stable HSE
 
@@ -24,11 +25,11 @@ void SystemClock_HSE(void) // 25 MHz BlackPill
 
 void PLL_enable() //84 MHz from HSE 25 MHz
     {
+ //   RCC->CR |= RCC_CR_HSEBYP;  // включаем bypass
+ //   RCC->CR |=RCC_CR_HSEON; // enable HSE
+ //   while(!(RCC->CR & RCC_CR_HSERDY)); // wait stable HSE
 
-    RCC->CR |=RCC_CR_HSEON; // enable HSE
-    while(!(RCC->CR & RCC_CR_HSERDY)); // wait stable HSE
-
-
+    SystemClock_HSI_8MHz();
 
     RCC->PLLCFGR = (25<< RCC_PLLCFGR_PLLM_Pos) | //m div
                 (336<< RCC_PLLCFGR_PLLN_Pos) | // N mul
