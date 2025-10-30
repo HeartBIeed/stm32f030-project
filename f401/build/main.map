@@ -371,8 +371,10 @@ Discarded input sections
  .text          0x00000000        0x0 build/rcc.o
  .data          0x00000000        0x0 build/rcc.o
  .bss           0x00000000        0x0 build/rcc.o
- .text.SystemClock_HSE
+ .text.SystemClock_HSI_8MHz
                 0x00000000       0x50 build/rcc.o
+ .text.SystemClock_HSE
+                0x00000000       0x44 build/rcc.o
  .debug_macro   0x00000000      0xac0 build/rcc.o
  .debug_macro   0x00000000       0x22 build/rcc.o
  .debug_macro   0x00000000       0x8e build/rcc.o
@@ -803,7 +805,7 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib
                 0x08000000                g_pfnVectors
                 0x08000194                        . = ALIGN (0x4)
 
-.text           0x08000194      0x5ac
+.text           0x08000194      0x570
                 0x08000194                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000194      0x15c build/system_stm32f4xx.o
@@ -835,181 +837,178 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib
                 0x08000434                gpio_init
  .text.main     0x08000478       0x54 build/main.o
                 0x08000478                main
- .text.SystemClock_HSI_8MHz
-                0x080004cc       0x50 build/rcc.o
-                0x080004cc                SystemClock_HSI_8MHz
  .text.PLL_enable
-                0x0800051c       0x98 build/rcc.o
-                0x0800051c                PLL_enable
+                0x080004cc       0xac build/rcc.o
+                0x080004cc                PLL_enable
  .text.Reset_Handler
-                0x080005b4       0x50 startup_stm32f401rctx.o
-                0x080005b4                Reset_Handler
+                0x08000578       0x50 startup_stm32f401rctx.o
+                0x08000578                Reset_Handler
  .text.Default_Handler
-                0x08000604        0x2 startup_stm32f401rctx.o
-                0x08000604                RTC_Alarm_IRQHandler
-                0x08000604                EXTI2_IRQHandler
-                0x08000604                DebugMon_Handler
-                0x08000604                SPI4_IRQHandler
-                0x08000604                TIM1_CC_IRQHandler
-                0x08000604                DMA2_Stream5_IRQHandler
-                0x08000604                HardFault_Handler
-                0x08000604                DMA1_Stream5_IRQHandler
-                0x08000604                PVD_IRQHandler
-                0x08000604                SDIO_IRQHandler
-                0x08000604                TAMP_STAMP_IRQHandler
-                0x08000604                PendSV_Handler
-                0x08000604                NMI_Handler
-                0x08000604                EXTI3_IRQHandler
-                0x08000604                TIM1_UP_TIM10_IRQHandler
-                0x08000604                I2C3_ER_IRQHandler
-                0x08000604                EXTI0_IRQHandler
-                0x08000604                I2C2_EV_IRQHandler
-                0x08000604                DMA1_Stream2_IRQHandler
-                0x08000604                FPU_IRQHandler
-                0x08000604                UsageFault_Handler
-                0x08000604                DMA2_Stream2_IRQHandler
-                0x08000604                SPI1_IRQHandler
-                0x08000604                TIM1_BRK_TIM9_IRQHandler
-                0x08000604                DMA2_Stream3_IRQHandler
-                0x08000604                USART6_IRQHandler
-                0x08000604                DMA2_Stream0_IRQHandler
-                0x08000604                TIM4_IRQHandler
-                0x08000604                I2C1_EV_IRQHandler
-                0x08000604                DMA1_Stream6_IRQHandler
-                0x08000604                DMA1_Stream1_IRQHandler
-                0x08000604                TIM3_IRQHandler
-                0x08000604                RCC_IRQHandler
-                0x08000604                Default_Handler
-                0x08000604                EXTI15_10_IRQHandler
-                0x08000604                ADC_IRQHandler
-                0x08000604                DMA1_Stream7_IRQHandler
-                0x08000604                TIM5_IRQHandler
-                0x08000604                DMA2_Stream7_IRQHandler
-                0x08000604                I2C3_EV_IRQHandler
-                0x08000604                EXTI9_5_IRQHandler
-                0x08000604                RTC_WKUP_IRQHandler
-                0x08000604                SPI2_IRQHandler
-                0x08000604                MemManage_Handler
-                0x08000604                DMA1_Stream0_IRQHandler
-                0x08000604                SVC_Handler
-                0x08000604                EXTI4_IRQHandler
-                0x08000604                WWDG_IRQHandler
-                0x08000604                TIM2_IRQHandler
-                0x08000604                OTG_FS_WKUP_IRQHandler
-                0x08000604                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08000604                EXTI1_IRQHandler
-                0x08000604                USART2_IRQHandler
-                0x08000604                I2C2_ER_IRQHandler
-                0x08000604                DMA2_Stream1_IRQHandler
-                0x08000604                FLASH_IRQHandler
-                0x08000604                DMA2_Stream4_IRQHandler
-                0x08000604                BusFault_Handler
-                0x08000604                USART1_IRQHandler
-                0x08000604                OTG_FS_IRQHandler
-                0x08000604                SPI3_IRQHandler
-                0x08000604                DMA1_Stream4_IRQHandler
-                0x08000604                I2C1_ER_IRQHandler
-                0x08000604                DMA2_Stream6_IRQHandler
-                0x08000604                DMA1_Stream3_IRQHandler
- *fill*         0x08000606        0x2 
+                0x080005c8        0x2 startup_stm32f401rctx.o
+                0x080005c8                RTC_Alarm_IRQHandler
+                0x080005c8                EXTI2_IRQHandler
+                0x080005c8                DebugMon_Handler
+                0x080005c8                SPI4_IRQHandler
+                0x080005c8                TIM1_CC_IRQHandler
+                0x080005c8                DMA2_Stream5_IRQHandler
+                0x080005c8                HardFault_Handler
+                0x080005c8                DMA1_Stream5_IRQHandler
+                0x080005c8                PVD_IRQHandler
+                0x080005c8                SDIO_IRQHandler
+                0x080005c8                TAMP_STAMP_IRQHandler
+                0x080005c8                PendSV_Handler
+                0x080005c8                NMI_Handler
+                0x080005c8                EXTI3_IRQHandler
+                0x080005c8                TIM1_UP_TIM10_IRQHandler
+                0x080005c8                I2C3_ER_IRQHandler
+                0x080005c8                EXTI0_IRQHandler
+                0x080005c8                I2C2_EV_IRQHandler
+                0x080005c8                DMA1_Stream2_IRQHandler
+                0x080005c8                FPU_IRQHandler
+                0x080005c8                UsageFault_Handler
+                0x080005c8                DMA2_Stream2_IRQHandler
+                0x080005c8                SPI1_IRQHandler
+                0x080005c8                TIM1_BRK_TIM9_IRQHandler
+                0x080005c8                DMA2_Stream3_IRQHandler
+                0x080005c8                USART6_IRQHandler
+                0x080005c8                DMA2_Stream0_IRQHandler
+                0x080005c8                TIM4_IRQHandler
+                0x080005c8                I2C1_EV_IRQHandler
+                0x080005c8                DMA1_Stream6_IRQHandler
+                0x080005c8                DMA1_Stream1_IRQHandler
+                0x080005c8                TIM3_IRQHandler
+                0x080005c8                RCC_IRQHandler
+                0x080005c8                Default_Handler
+                0x080005c8                EXTI15_10_IRQHandler
+                0x080005c8                ADC_IRQHandler
+                0x080005c8                DMA1_Stream7_IRQHandler
+                0x080005c8                TIM5_IRQHandler
+                0x080005c8                DMA2_Stream7_IRQHandler
+                0x080005c8                I2C3_EV_IRQHandler
+                0x080005c8                EXTI9_5_IRQHandler
+                0x080005c8                RTC_WKUP_IRQHandler
+                0x080005c8                SPI2_IRQHandler
+                0x080005c8                MemManage_Handler
+                0x080005c8                DMA1_Stream0_IRQHandler
+                0x080005c8                SVC_Handler
+                0x080005c8                EXTI4_IRQHandler
+                0x080005c8                WWDG_IRQHandler
+                0x080005c8                TIM2_IRQHandler
+                0x080005c8                OTG_FS_WKUP_IRQHandler
+                0x080005c8                TIM1_TRG_COM_TIM11_IRQHandler
+                0x080005c8                EXTI1_IRQHandler
+                0x080005c8                USART2_IRQHandler
+                0x080005c8                I2C2_ER_IRQHandler
+                0x080005c8                DMA2_Stream1_IRQHandler
+                0x080005c8                FLASH_IRQHandler
+                0x080005c8                DMA2_Stream4_IRQHandler
+                0x080005c8                BusFault_Handler
+                0x080005c8                USART1_IRQHandler
+                0x080005c8                OTG_FS_IRQHandler
+                0x080005c8                SPI3_IRQHandler
+                0x080005c8                DMA1_Stream4_IRQHandler
+                0x080005c8                I2C1_ER_IRQHandler
+                0x080005c8                DMA2_Stream6_IRQHandler
+                0x080005c8                DMA1_Stream3_IRQHandler
+ *fill*         0x080005ca        0x2 
  .text.__libc_init_array
-                0x08000608       0x50 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-init.o)
-                0x08000608                __libc_init_array
+                0x080005cc       0x50 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-init.o)
+                0x080005cc                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08000658        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
-                0x08000658                __retarget_lock_acquire_recursive
+                0x0800061c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
+                0x0800061c                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0800065c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
-                0x0800065c                __retarget_lock_release_recursive
+                0x08000620        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
+                0x08000620                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08000660       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
- .text.atexit   0x08000674        0xc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-atexit.o)
-                0x08000674                atexit
+                0x08000624       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
+ .text.atexit   0x08000638        0xc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-atexit.o)
+                0x08000638                atexit
  .text.__libc_fini_array
-                0x08000680       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-fini.o)
-                0x08000680                __libc_fini_array
+                0x08000644       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-fini.o)
+                0x08000644                __libc_fini_array
  .text.__register_exitproc
-                0x080006a8       0x80 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__atexit.o)
-                0x080006a8                __register_exitproc
+                0x0800066c       0x80 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__atexit.o)
+                0x0800066c                __register_exitproc
  *(.glue_7)
- .glue_7        0x08000728        0x0 linker stubs
+ .glue_7        0x080006ec        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000728        0x0 linker stubs
+ .glue_7t       0x080006ec        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x080006ec        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x08000728        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
-                0x08000728                _init
- .init          0x0800072c        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x080006ec        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
+                0x080006ec                _init
+ .init          0x080006f0        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x08000734        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
-                0x08000734                _fini
- .fini          0x08000738        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
-                0x08000740                        . = ALIGN (0x4)
-                0x08000740                        _etext = .
+ .fini          0x080006f8        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
+                0x080006f8                _fini
+ .fini          0x080006fc        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
+                0x08000704                        . = ALIGN (0x4)
+                0x08000704                        _etext = .
 
-.vfp11_veneer   0x08000740        0x0
- .vfp11_veneer  0x08000740        0x0 linker stubs
+.vfp11_veneer   0x08000704        0x0
+ .vfp11_veneer  0x08000704        0x0 linker stubs
 
-.v4_bx          0x08000740        0x0
- .v4_bx         0x08000740        0x0 linker stubs
+.v4_bx          0x08000704        0x0
+ .v4_bx         0x08000704        0x0 linker stubs
 
-.iplt           0x08000740        0x0
- .iplt          0x08000740        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x08000704        0x0
+ .iplt          0x08000704        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x08000740       0x18
-                0x08000740                        . = ALIGN (0x4)
+.rodata         0x08000704       0x18
+                0x08000704                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08000740       0x18 build/system_stm32f4xx.o
-                0x08000740                AHBPrescTable
-                0x08000750                APBPrescTable
+ .rodata        0x08000704       0x18 build/system_stm32f4xx.o
+                0x08000704                AHBPrescTable
+                0x08000714                APBPrescTable
  *(.rodata*)
-                0x08000758                        . = ALIGN (0x4)
+                0x0800071c                        . = ALIGN (0x4)
 
-.ARM.extab      0x08000758        0x0
-                0x08000758                        . = ALIGN (0x4)
+.ARM.extab      0x0800071c        0x0
+                0x0800071c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000758                        . = ALIGN (0x4)
+                0x0800071c                        . = ALIGN (0x4)
 
-.ARM            0x08000758        0x0
-                0x08000758                        . = ALIGN (0x4)
-                0x08000758                        __exidx_start = .
+.ARM            0x0800071c        0x0
+                0x0800071c                        . = ALIGN (0x4)
+                0x0800071c                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000758                        __exidx_end = .
-                0x08000758                        . = ALIGN (0x4)
+                0x0800071c                        __exidx_end = .
+                0x0800071c                        . = ALIGN (0x4)
 
-.preinit_array  0x08000758        0x0
-                0x08000758                        . = ALIGN (0x4)
-                0x08000758                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800071c        0x0
+                0x0800071c                        . = ALIGN (0x4)
+                0x0800071c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000758                        PROVIDE (__preinit_array_end = .)
-                0x08000758                        . = ALIGN (0x4)
+                0x0800071c                        PROVIDE (__preinit_array_end = .)
+                0x0800071c                        . = ALIGN (0x4)
 
-.init_array     0x08000758        0x8
-                0x08000758                        . = ALIGN (0x4)
-                0x08000758                        PROVIDE (__init_array_start = .)
+.init_array     0x0800071c        0x8
+                0x0800071c                        . = ALIGN (0x4)
+                0x0800071c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08000758        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
+                0x0800071c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0800075c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08000760                        PROVIDE (__init_array_end = .)
-                0x08000760                        . = ALIGN (0x4)
+ .init_array    0x08000720        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x08000724                        PROVIDE (__init_array_end = .)
+                0x08000724                        . = ALIGN (0x4)
 
-.fini_array     0x08000760        0x4
-                0x08000760                        . = ALIGN (0x4)
-                0x08000760                        PROVIDE (__fini_array_start = .)
+.fini_array     0x08000724        0x4
+                0x08000724                        . = ALIGN (0x4)
+                0x08000724                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08000760        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08000764                        PROVIDE (__fini_array_end = .)
-                0x08000764                        . = ALIGN (0x4)
-                0x08000764                        _sidata = LOADADDR (.data)
+ .fini_array    0x08000724        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x08000728                        PROVIDE (__fini_array_end = .)
+                0x08000728                        . = ALIGN (0x4)
+                0x08000728                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08000764        0x0
- .rel.iplt      0x08000764        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x08000728        0x0
+ .rel.iplt      0x08000728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x20000000        0x8 load address 0x08000764
+.data           0x20000000        0x8 load address 0x08000728
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -1025,17 +1024,17 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib
                 0x20000008                        _edata = .
 
 .tm_clone_table
-                0x20000008        0x0 load address 0x0800076c
+                0x20000008        0x0 load address 0x08000730
  .tm_clone_table
                 0x20000008        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000008        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x20000008        0x0 load address 0x0800076c
+.igot.plt       0x20000008        0x0 load address 0x08000730
  .igot.plt      0x20000008        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x20000008                        . = ALIGN (0x4)
 
-.bss            0x20000008      0x1b8 load address 0x0800076c
+.bss            0x20000008      0x1b8 load address 0x08000730
                 0x20000008                        _sbss = .
                 0x20000008                        __bss_start__ = _sbss
  *(.bss)
@@ -1061,7 +1060,7 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib
                 0x200001c0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200001c0      0x600 load address 0x0800076c
+                0x200001c0      0x600 load address 0x08000730
                 0x200001c0                        . = ALIGN (0x8)
                 0x200001c0                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -1199,12 +1198,12 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib
  .debug_macro   0x0000ea43      0x213 build/rcc.o
  .debug_macro   0x0000ec56       0xe0 build/system_stm32f4xx.o
 
-.debug_line     0x00000000     0x1239
+.debug_line     0x00000000     0x1250
  .debug_line    0x00000000      0x4c3 build/timer.o
  .debug_line    0x000004c3      0x44f build/main.o
- .debug_line    0x00000912      0x507 build/rcc.o
- .debug_line    0x00000e19      0x3a6 build/system_stm32f4xx.o
- .debug_line    0x000011bf       0x7a startup_stm32f401rctx.o
+ .debug_line    0x00000912      0x51e build/rcc.o
+ .debug_line    0x00000e30      0x3a6 build/system_stm32f4xx.o
+ .debug_line    0x000011d6       0x7a startup_stm32f401rctx.o
 
 .debug_str      0x00000000    0x53638
  .debug_str     0x00000000    0x53638 build/timer.o
