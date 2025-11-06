@@ -35,47 +35,16 @@ int main(void)
 
 //		CLEAR_BIT(GPIOC->ODR, (1 << 13));
 GPIOC->BSRR = (1 << (13 + 16));
-			_delay_ms(5000);
+		_delay_ms(1000);
 
 
  while( 1 )
 	{
 		SET_BIT(GPIOC->ODR, (1 << 13));
-		_delay_ms(5000);
+		_delay_ms(1000);
 		CLEAR_BIT(GPIOC->ODR, (1 << 13));
-		_delay_ms(5000);
-/*
-uint8_t data = usart1_recieve_byte();		
+		_delay_ms(1000);
 
-usart1_ptr_str("UABC1");
-
-
-		if ( data == '6')
-		{
-
-			GPIOA->ODR |= (1 << 6);
-		
-		}
-
-		else if (data == '7')
-		{
-
-			GPIOA->ODR |= (1 << 7);
-		
-		}		
-
-		else if (data == 'S')
-		{
-		usart1_ptr_str("string");
-		
-		}
-
-		else
-		{
-		usart1_echo();
-		}
-
-*/
 	}
 }
 
