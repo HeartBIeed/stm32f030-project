@@ -10,6 +10,7 @@
 
 void SystemClock_HSE_8MHz(void);
 void SystemClock_HSI_8MHz(void);
+void PLL_enable();
 
 
 

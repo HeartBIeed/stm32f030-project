@@ -1,4 +1,4 @@
-uart.c:6:6:UART_init	32	static
+uart.c:6:6:UART_init	24	static
 uart.c:38:6:usart1_send_byte	16	static
 uart.c:44:9:usart1_recieve_byte	8	static
 uart.c:54:6:usart1_rxen_flag	8	static

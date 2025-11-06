@@ -27,7 +27,7 @@ void UART_init(uint16_t speed)
 
 	uint32_t fcpu = 8000000u;
 	
-	USART1->BRR = fcpu/speed; 
+	USART1->BRR = 0x341; 
 	
 //	USART1->BRR = (uint16_t)((fcpu+(baud/2))/baud); 
 
