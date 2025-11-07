@@ -13,17 +13,7 @@ void SysTick_init()
     SysTick_CTRL_ENABLE_Msk; 
 
     }
-/*
-void DWT_init()
-    {
-        // debug 
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; // trace EN
-    DWT->CYCCNT = 0;
-    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; // EN cycle counter 
 
-    }
-
-*/
 void SysTick_Handler()
     {
         ms_ticks++;
@@ -36,12 +26,9 @@ void _delay_ms(uint32_t ms)
     while (( ms_ticks - start) < ms);
 
     }
-/*
-void _delay_us(uint32_t us)
-    {
-    uint32_t start = DWT->CYCCNT;
-    uint32_t ticks = us * (SystemCoreClock/1000000);
-    while ((DWT->CYCCNT - start)<ticks);
 
-    }
-*/
+void _delay_us(uint32_t us)
+{
+    us *= 8; // 8 тактов на 1 мкс при 8 МГц
+    while(us--) __NOP();
+}

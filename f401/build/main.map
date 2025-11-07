@@ -21,7 +21,6 @@ Archive member included to satisfy reference by file (symbol)
 
 Discarded input sections
 
-<<<<<<< HEAD
  .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
@@ -35,218 +34,6 @@ Discarded input sections
  .debug_line    0x0000000000000000       0x87 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
-=======
- .text          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
- .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
- .text          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .rodata.all_implied_fbits
-                0x00000000       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .data.__dso_handle
-                0x00000000        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .text          0x00000000       0x7c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .ARM.extab     0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .ARM.exidx     0x00000000       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_line_str
-                0x00000000       0xd3 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .ARM.attributes
-                0x00000000       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .group         0x00000000        0xc build/timer.o
- .text          0x00000000        0x0 build/timer.o
- .data          0x00000000        0x0 build/timer.o
- .bss           0x00000000        0x0 build/timer.o
- .text._delay_us
-                0x00000000       0x4c build/timer.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .group         0x00000000        0xc build/main.o
- .text          0x00000000        0x0 build/main.o
- .data          0x00000000        0x0 build/main.o
- .bss           0x00000000        0x0 build/main.o
- .debug_macro   0x00000000      0xac0 build/main.o
- .debug_macro   0x00000000       0x22 build/main.o
- .debug_macro   0x00000000       0x8e build/main.o
- .debug_macro   0x00000000       0x51 build/main.o
- .debug_macro   0x00000000      0x103 build/main.o
- .debug_macro   0x00000000       0x6a build/main.o
- .debug_macro   0x00000000      0x1df build/main.o
- .debug_macro   0x00000000       0x61 build/main.o
- .debug_macro   0x00000000       0x24 build/main.o
- .debug_macro   0x00000000       0x43 build/main.o
- .debug_macro   0x00000000       0x34 build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000       0x9e build/main.o
- .debug_macro   0x00000000      0x364 build/main.o
- .debug_macro   0x00000000      0x112 build/main.o
- .debug_macro   0x00000000       0x10 build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000       0x4a build/main.o
- .debug_macro   0x00000000       0x34 build/main.o
- .debug_macro   0x00000000       0x10 build/main.o
- .debug_macro   0x00000000       0x58 build/main.o
- .debug_macro   0x00000000       0x8e build/main.o
- .debug_macro   0x00000000       0x1c build/main.o
- .debug_macro   0x00000000      0x17e build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000      0x146 build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000       0x3c build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .debug_macro   0x00000000       0x29 build/main.o
- .debug_macro   0x00000000       0x2e build/main.o
- .debug_macro   0x00000000       0x28 build/main.o
- .debug_macro   0x00000000       0x1c build/main.o
- .debug_macro   0x00000000       0x22 build/main.o
- .debug_macro   0x00000000       0xfb build/main.o
- .debug_macro   0x00000000     0x1011 build/main.o
- .debug_macro   0x00000000      0x11f build/main.o
- .debug_macro   0x00000000     0xb881 build/main.o
- .debug_macro   0x00000000       0x6d build/main.o
- .debug_macro   0x00000000       0x16 build/main.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .group         0x00000000        0xc build/uart.o
- .text          0x00000000        0x0 build/uart.o
- .data          0x00000000        0x0 build/uart.o
- .bss           0x00000000        0x0 build/uart.o
- .bss.uart1_flag
-                0x00000000        0x1 build/uart.o
- .text.UART_init
-                0x00000000       0xc4 build/uart.o
- .text.usart1_send_byte
-                0x00000000       0x2c build/uart.o
- .text.usart1_recieve_byte
-                0x00000000       0x24 build/uart.o
- .text.usart1_rxen_flag
-                0x00000000       0x30 build/uart.o
- .text.usart1_echo
-                0x00000000       0x24 build/uart.o
- .text.usart1_ptr_str
-                0x00000000       0x2a build/uart.o
- .debug_info    0x00000000      0x445 build/uart.o
- .debug_abbrev  0x00000000      0x180 build/uart.o
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  .debug_aranges
                 0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .debug_str     0x0000000000000000       0x95 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
@@ -350,7 +137,7 @@ Discarded input sections
  .text.SystemClock_HSI_8MHz
                 0x0000000000000000       0x50 build/rcc.o
  .text.SystemClock_HSE
-                0x0000000000000000       0x44 build/rcc.o
+                0x0000000000000000       0x54 build/rcc.o
  .debug_macro   0x0000000000000000       0x6a build/rcc.o
  .debug_macro   0x0000000000000000       0x34 build/rcc.o
  .debug_macro   0x0000000000000000       0x16 build/rcc.o
@@ -411,40 +198,54 @@ Discarded input sections
  .group         0x0000000000000000        0xc build/timer.o
  .group         0x0000000000000000        0xc build/timer.o
  .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
+ .group         0x0000000000000000        0xc build/timer.o
  .text          0x0000000000000000        0x0 build/timer.o
  .data          0x0000000000000000        0x0 build/timer.o
  .bss           0x0000000000000000        0x0 build/timer.o
  .text._delay_us
                 0x0000000000000000       0x4c build/timer.o
- .debug_macro   0x0000000000000000      0xac0 build/timer.o
+ .debug_macro   0x0000000000000000      0xa60 build/timer.o
+ .debug_macro   0x0000000000000000      0x34e build/timer.o
  .debug_macro   0x0000000000000000       0x22 build/timer.o
- .debug_macro   0x0000000000000000       0x8e build/timer.o
- .debug_macro   0x0000000000000000       0x51 build/timer.o
- .debug_macro   0x0000000000000000      0x103 build/timer.o
- .debug_macro   0x0000000000000000       0x6a build/timer.o
- .debug_macro   0x0000000000000000      0x1df build/timer.o
- .debug_macro   0x0000000000000000       0x61 build/timer.o
- .debug_macro   0x0000000000000000       0x24 build/timer.o
+ .debug_macro   0x0000000000000000       0x46 build/timer.o
+ .debug_macro   0x0000000000000000       0x18 build/timer.o
+ .debug_macro   0x0000000000000000       0x94 build/timer.o
+ .debug_macro   0x0000000000000000       0x3c build/timer.o
+ .debug_macro   0x0000000000000000       0x34 build/timer.o
+ .debug_macro   0x0000000000000000       0x16 build/timer.o
+ .debug_macro   0x0000000000000000       0x57 build/timer.o
+ .debug_macro   0x0000000000000000       0x97 build/timer.o
+ .debug_macro   0x0000000000000000      0x333 build/timer.o
+ .debug_macro   0x0000000000000000       0xfd build/timer.o
+ .debug_macro   0x0000000000000000       0x10 build/timer.o
+ .debug_macro   0x0000000000000000       0x16 build/timer.o
  .debug_macro   0x0000000000000000       0x43 build/timer.o
  .debug_macro   0x0000000000000000       0x34 build/timer.o
- .debug_macro   0x0000000000000000       0x16 build/timer.o
- .debug_macro   0x0000000000000000       0x9e build/timer.o
- .debug_macro   0x0000000000000000      0x364 build/timer.o
- .debug_macro   0x0000000000000000      0x112 build/timer.o
  .debug_macro   0x0000000000000000       0x10 build/timer.o
- .debug_macro   0x0000000000000000       0x16 build/timer.o
- .debug_macro   0x0000000000000000       0x4a build/timer.o
- .debug_macro   0x0000000000000000       0x34 build/timer.o
- .debug_macro   0x0000000000000000       0x10 build/timer.o
- .debug_macro   0x0000000000000000       0x58 build/timer.o
- .debug_macro   0x0000000000000000       0x8e build/timer.o
+ .debug_macro   0x0000000000000000       0x52 build/timer.o
+ .debug_macro   0x0000000000000000       0x71 build/timer.o
  .debug_macro   0x0000000000000000       0x1c build/timer.o
- .debug_macro   0x0000000000000000      0x17e build/timer.o
+ .debug_macro   0x0000000000000000      0x12a build/timer.o
+ .debug_macro   0x0000000000000000       0x10 build/timer.o
+ .debug_macro   0x0000000000000000       0x6a build/timer.o
+ .debug_macro   0x0000000000000000       0x1c build/timer.o
+ .debug_macro   0x0000000000000000       0x52 build/timer.o
+ .debug_macro   0x0000000000000000       0x22 build/timer.o
+ .debug_macro   0x0000000000000000       0x10 build/timer.o
+ .debug_macro   0x0000000000000000       0x40 build/timer.o
+ .debug_macro   0x0000000000000000       0xd5 build/timer.o
+ .debug_macro   0x0000000000000000       0x1c build/timer.o
+ .debug_macro   0x0000000000000000       0x3d build/timer.o
  .debug_macro   0x0000000000000000       0x16 build/timer.o
+ .debug_macro   0x0000000000000000      0x145 build/timer.o
  .debug_macro   0x0000000000000000       0x16 build/timer.o
- .debug_macro   0x0000000000000000      0x146 build/timer.o
- .debug_macro   0x0000000000000000       0x16 build/timer.o
- .debug_macro   0x0000000000000000       0x3c build/timer.o
+ .debug_macro   0x0000000000000000       0x35 build/timer.o
  .debug_macro   0x0000000000000000       0x16 build/timer.o
  .debug_macro   0x0000000000000000       0x29 build/timer.o
  .debug_macro   0x0000000000000000       0x2e build/timer.o
@@ -568,7 +369,6 @@ Discarded input sections
  .comment       0x0000000000000000       0x47 build/uart.o
  .debug_frame   0x0000000000000000       0xe0 build/uart.o
  .ARM.attributes
-<<<<<<< HEAD
                 0x0000000000000000       0x2e build/uart.o
  .group         0x0000000000000000        0xc build/system_stm32f4xx.o
  .group         0x0000000000000000        0xc build/system_stm32f4xx.o
@@ -620,139 +420,6 @@ Discarded input sections
  .debug_str     0x0000000000000000      0x585 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
  .comment       0x0000000000000000       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
  .debug_frame   0x0000000000000000       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
-=======
-                0x00000000       0x2e build/uart.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .group         0x00000000        0xc build/rcc.o
- .text          0x00000000        0x0 build/rcc.o
- .data          0x00000000        0x0 build/rcc.o
- .bss           0x00000000        0x0 build/rcc.o
- .text.SystemClock_HSI_8MHz
-                0x00000000       0x50 build/rcc.o
- .text.SystemClock_HSE
-                0x00000000       0x54 build/rcc.o
- .debug_macro   0x00000000      0xac0 build/rcc.o
- .debug_macro   0x00000000       0x22 build/rcc.o
- .debug_macro   0x00000000       0x8e build/rcc.o
- .debug_macro   0x00000000       0x51 build/rcc.o
- .debug_macro   0x00000000      0x103 build/rcc.o
- .debug_macro   0x00000000       0x6a build/rcc.o
- .debug_macro   0x00000000      0x1df build/rcc.o
- .debug_macro   0x00000000       0x61 build/rcc.o
- .debug_macro   0x00000000       0x24 build/rcc.o
- .debug_macro   0x00000000       0x43 build/rcc.o
- .debug_macro   0x00000000       0x34 build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000       0x9e build/rcc.o
- .debug_macro   0x00000000      0x364 build/rcc.o
- .debug_macro   0x00000000      0x112 build/rcc.o
- .debug_macro   0x00000000       0x10 build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000       0x4a build/rcc.o
- .debug_macro   0x00000000       0x34 build/rcc.o
- .debug_macro   0x00000000       0x10 build/rcc.o
- .debug_macro   0x00000000       0x58 build/rcc.o
- .debug_macro   0x00000000       0x8e build/rcc.o
- .debug_macro   0x00000000       0x1c build/rcc.o
- .debug_macro   0x00000000      0x17e build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000      0x146 build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000       0x3c build/rcc.o
- .debug_macro   0x00000000       0x16 build/rcc.o
- .debug_macro   0x00000000       0x29 build/rcc.o
- .debug_macro   0x00000000       0x2e build/rcc.o
- .debug_macro   0x00000000       0x28 build/rcc.o
- .debug_macro   0x00000000       0x1c build/rcc.o
- .debug_macro   0x00000000       0x22 build/rcc.o
- .debug_macro   0x00000000       0xfb build/rcc.o
- .debug_macro   0x00000000     0x1011 build/rcc.o
- .debug_macro   0x00000000      0x11f build/rcc.o
- .debug_macro   0x00000000     0xb881 build/rcc.o
- .debug_macro   0x00000000       0x6d build/rcc.o
- .debug_macro   0x00000000       0x10 build/rcc.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .group         0x00000000        0xc build/system_stm32f4xx.o
- .bss           0x00000000        0x0 build/system_stm32f4xx.o
- .debug_macro   0x00000000      0xac0 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x2e build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x28 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x22 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x8e build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x51 build/system_stm32f4xx.o
- .debug_macro   0x00000000      0x103 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x6a build/system_stm32f4xx.o
- .debug_macro   0x00000000      0x1df build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x1c build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x22 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0xfb build/system_stm32f4xx.o
- .debug_macro   0x00000000     0x1011 build/system_stm32f4xx.o
- .debug_macro   0x00000000      0x11f build/system_stm32f4xx.o
- .debug_macro   0x00000000     0xb881 build/system_stm32f4xx.o
- .debug_macro   0x00000000       0x6d build/system_stm32f4xx.o
- .text          0x00000000       0x14 startup_stm32f401rctx.o
- .data          0x00000000        0x0 startup_stm32f401rctx.o
- .bss           0x00000000        0x0 startup_stm32f401rctx.o
- .text          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-exit.o)
- .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-exit.o)
- .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-exit.o)
- .text.exit     0x00000000       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-exit.o)
- .debug_frame   0x00000000       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-exit.o)
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  .ARM.attributes
                 0x0000000000000000       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
@@ -812,21 +479,13 @@ FLASH            0x0000000008000000 0x0000000000040000 xr
 
 Linker script and memory map
 
-<<<<<<< HEAD
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 LOAD build/main.o
 LOAD build/rcc.o
-=======
-LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
-LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
 LOAD build/timer.o
-LOAD build/main.o
 LOAD build/uart.o
-LOAD build/rcc.o
 LOAD build/system_stm32f4xx.o
 LOAD startup_stm32f401rctx.o
 START GROUP
@@ -855,13 +514,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000194                . = ALIGN (0x4)
 
-<<<<<<< HEAD
-.text           0x0000000008000194      0x548
+.text           0x0000000008000194      0x544
                 0x0000000008000194                . = ALIGN (0x4)
-=======
-.text           0x08000194      0x56c
-                0x08000194                        . = ALIGN (0x4)
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  *(.text)
  .text          0x0000000008000194       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .text          0x000000000800021c      0x15c build/system_stm32f4xx.o
@@ -876,383 +530,181 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .text          0x00000000080003f8       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
                 0x00000000080003f8                __register_exitproc
  *(.text*)
-<<<<<<< HEAD
  .text.gpio_init
                 0x0000000008000460       0x44 build/main.o
                 0x0000000008000460                gpio_init
  .text.main     0x00000000080004a4       0x54 build/main.o
                 0x00000000080004a4                main
  .text.PLL_enable
-                0x00000000080004f8       0xac build/rcc.o
+                0x00000000080004f8       0xa8 build/rcc.o
                 0x00000000080004f8                PLL_enable
  .text.SysTick_init
-                0x00000000080005a4       0x38 build/timer.o
-                0x00000000080005a4                SysTick_init
+                0x00000000080005a0       0x38 build/timer.o
+                0x00000000080005a0                SysTick_init
  .text.DWT_init
-                0x00000000080005dc       0x34 build/timer.o
-                0x00000000080005dc                DWT_init
+                0x00000000080005d8       0x34 build/timer.o
+                0x00000000080005d8                DWT_init
  .text.SysTick_Handler
-                0x0000000008000610       0x1c build/timer.o
-                0x0000000008000610                SysTick_Handler
+                0x000000000800060c       0x1c build/timer.o
+                0x000000000800060c                SysTick_Handler
  .text._delay_ms
-                0x000000000800062c       0x30 build/timer.o
-                0x000000000800062c                _delay_ms
+                0x0000000008000628       0x30 build/timer.o
+                0x0000000008000628                _delay_ms
  .text.Reset_Handler
-                0x000000000800065c       0x50 startup_stm32f401rctx.o
-                0x000000000800065c                Reset_Handler
+                0x0000000008000658       0x50 startup_stm32f401rctx.o
+                0x0000000008000658                Reset_Handler
  .text.Default_Handler
-                0x00000000080006ac        0x2 startup_stm32f401rctx.o
-                0x00000000080006ac                RTC_Alarm_IRQHandler
-                0x00000000080006ac                EXTI2_IRQHandler
-                0x00000000080006ac                DebugMon_Handler
-                0x00000000080006ac                SPI4_IRQHandler
-                0x00000000080006ac                TIM1_CC_IRQHandler
-                0x00000000080006ac                DMA2_Stream5_IRQHandler
-                0x00000000080006ac                HardFault_Handler
-                0x00000000080006ac                DMA1_Stream5_IRQHandler
-                0x00000000080006ac                PVD_IRQHandler
-                0x00000000080006ac                SDIO_IRQHandler
-                0x00000000080006ac                TAMP_STAMP_IRQHandler
-                0x00000000080006ac                PendSV_Handler
-                0x00000000080006ac                NMI_Handler
-                0x00000000080006ac                EXTI3_IRQHandler
-                0x00000000080006ac                TIM1_UP_TIM10_IRQHandler
-                0x00000000080006ac                I2C3_ER_IRQHandler
-                0x00000000080006ac                EXTI0_IRQHandler
-                0x00000000080006ac                I2C2_EV_IRQHandler
-                0x00000000080006ac                DMA1_Stream2_IRQHandler
-                0x00000000080006ac                FPU_IRQHandler
-                0x00000000080006ac                UsageFault_Handler
-                0x00000000080006ac                DMA2_Stream2_IRQHandler
-                0x00000000080006ac                SPI1_IRQHandler
-                0x00000000080006ac                TIM1_BRK_TIM9_IRQHandler
-                0x00000000080006ac                DMA2_Stream3_IRQHandler
-                0x00000000080006ac                USART6_IRQHandler
-                0x00000000080006ac                DMA2_Stream0_IRQHandler
-                0x00000000080006ac                TIM4_IRQHandler
-                0x00000000080006ac                I2C1_EV_IRQHandler
-                0x00000000080006ac                DMA1_Stream6_IRQHandler
-                0x00000000080006ac                DMA1_Stream1_IRQHandler
-                0x00000000080006ac                TIM3_IRQHandler
-                0x00000000080006ac                RCC_IRQHandler
-                0x00000000080006ac                Default_Handler
-                0x00000000080006ac                EXTI15_10_IRQHandler
-                0x00000000080006ac                ADC_IRQHandler
-                0x00000000080006ac                DMA1_Stream7_IRQHandler
-                0x00000000080006ac                TIM5_IRQHandler
-                0x00000000080006ac                DMA2_Stream7_IRQHandler
-                0x00000000080006ac                I2C3_EV_IRQHandler
-                0x00000000080006ac                EXTI9_5_IRQHandler
-                0x00000000080006ac                RTC_WKUP_IRQHandler
-                0x00000000080006ac                SPI2_IRQHandler
-                0x00000000080006ac                MemManage_Handler
-                0x00000000080006ac                DMA1_Stream0_IRQHandler
-                0x00000000080006ac                SVC_Handler
-                0x00000000080006ac                EXTI4_IRQHandler
-                0x00000000080006ac                WWDG_IRQHandler
-                0x00000000080006ac                TIM2_IRQHandler
-                0x00000000080006ac                OTG_FS_WKUP_IRQHandler
-                0x00000000080006ac                TIM1_TRG_COM_TIM11_IRQHandler
-                0x00000000080006ac                EXTI1_IRQHandler
-                0x00000000080006ac                USART2_IRQHandler
-                0x00000000080006ac                I2C2_ER_IRQHandler
-                0x00000000080006ac                DMA2_Stream1_IRQHandler
-                0x00000000080006ac                FLASH_IRQHandler
-                0x00000000080006ac                DMA2_Stream4_IRQHandler
-                0x00000000080006ac                BusFault_Handler
-                0x00000000080006ac                USART1_IRQHandler
-                0x00000000080006ac                OTG_FS_IRQHandler
-                0x00000000080006ac                SPI3_IRQHandler
-                0x00000000080006ac                DMA1_Stream4_IRQHandler
-                0x00000000080006ac                I2C1_ER_IRQHandler
-                0x00000000080006ac                DMA2_Stream6_IRQHandler
-                0x00000000080006ac                DMA1_Stream3_IRQHandler
- *fill*         0x00000000080006ae        0x2 
- .text.startup  0x00000000080006b0       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x00000000080006a8        0x2 startup_stm32f401rctx.o
+                0x00000000080006a8                RTC_Alarm_IRQHandler
+                0x00000000080006a8                EXTI2_IRQHandler
+                0x00000000080006a8                DebugMon_Handler
+                0x00000000080006a8                SPI4_IRQHandler
+                0x00000000080006a8                TIM1_CC_IRQHandler
+                0x00000000080006a8                DMA2_Stream5_IRQHandler
+                0x00000000080006a8                HardFault_Handler
+                0x00000000080006a8                DMA1_Stream5_IRQHandler
+                0x00000000080006a8                PVD_IRQHandler
+                0x00000000080006a8                SDIO_IRQHandler
+                0x00000000080006a8                TAMP_STAMP_IRQHandler
+                0x00000000080006a8                PendSV_Handler
+                0x00000000080006a8                NMI_Handler
+                0x00000000080006a8                EXTI3_IRQHandler
+                0x00000000080006a8                TIM1_UP_TIM10_IRQHandler
+                0x00000000080006a8                I2C3_ER_IRQHandler
+                0x00000000080006a8                EXTI0_IRQHandler
+                0x00000000080006a8                I2C2_EV_IRQHandler
+                0x00000000080006a8                DMA1_Stream2_IRQHandler
+                0x00000000080006a8                FPU_IRQHandler
+                0x00000000080006a8                UsageFault_Handler
+                0x00000000080006a8                DMA2_Stream2_IRQHandler
+                0x00000000080006a8                SPI1_IRQHandler
+                0x00000000080006a8                TIM1_BRK_TIM9_IRQHandler
+                0x00000000080006a8                DMA2_Stream3_IRQHandler
+                0x00000000080006a8                USART6_IRQHandler
+                0x00000000080006a8                DMA2_Stream0_IRQHandler
+                0x00000000080006a8                TIM4_IRQHandler
+                0x00000000080006a8                I2C1_EV_IRQHandler
+                0x00000000080006a8                DMA1_Stream6_IRQHandler
+                0x00000000080006a8                DMA1_Stream1_IRQHandler
+                0x00000000080006a8                TIM3_IRQHandler
+                0x00000000080006a8                RCC_IRQHandler
+                0x00000000080006a8                Default_Handler
+                0x00000000080006a8                EXTI15_10_IRQHandler
+                0x00000000080006a8                ADC_IRQHandler
+                0x00000000080006a8                DMA1_Stream7_IRQHandler
+                0x00000000080006a8                TIM5_IRQHandler
+                0x00000000080006a8                DMA2_Stream7_IRQHandler
+                0x00000000080006a8                I2C3_EV_IRQHandler
+                0x00000000080006a8                EXTI9_5_IRQHandler
+                0x00000000080006a8                RTC_WKUP_IRQHandler
+                0x00000000080006a8                SPI2_IRQHandler
+                0x00000000080006a8                MemManage_Handler
+                0x00000000080006a8                DMA1_Stream0_IRQHandler
+                0x00000000080006a8                SVC_Handler
+                0x00000000080006a8                EXTI4_IRQHandler
+                0x00000000080006a8                WWDG_IRQHandler
+                0x00000000080006a8                TIM2_IRQHandler
+                0x00000000080006a8                OTG_FS_WKUP_IRQHandler
+                0x00000000080006a8                TIM1_TRG_COM_TIM11_IRQHandler
+                0x00000000080006a8                EXTI1_IRQHandler
+                0x00000000080006a8                USART2_IRQHandler
+                0x00000000080006a8                I2C2_ER_IRQHandler
+                0x00000000080006a8                DMA2_Stream1_IRQHandler
+                0x00000000080006a8                FLASH_IRQHandler
+                0x00000000080006a8                DMA2_Stream4_IRQHandler
+                0x00000000080006a8                BusFault_Handler
+                0x00000000080006a8                USART1_IRQHandler
+                0x00000000080006a8                OTG_FS_IRQHandler
+                0x00000000080006a8                SPI3_IRQHandler
+                0x00000000080006a8                DMA1_Stream4_IRQHandler
+                0x00000000080006a8                I2C1_ER_IRQHandler
+                0x00000000080006a8                DMA2_Stream6_IRQHandler
+                0x00000000080006a8                DMA1_Stream3_IRQHandler
+ *fill*         0x00000000080006aa        0x2 
+ .text.startup  0x00000000080006ac       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  *(.glue_7)
- .glue_7        0x00000000080006c4        0x0 linker stubs
+ .glue_7        0x00000000080006c0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080006c4        0x0 linker stubs
+ .glue_7t       0x00000000080006c0        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080006c4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x00000000080006c0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x00000000080006c4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x00000000080006c4                _init
- .init          0x00000000080006c8        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x00000000080006c0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x00000000080006c0                _init
+ .init          0x00000000080006c4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x00000000080006d0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x00000000080006d0                _fini
- .fini          0x00000000080006d4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
-                0x00000000080006dc                . = ALIGN (0x4)
-                0x00000000080006dc                _etext = .
+ .fini          0x00000000080006cc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x00000000080006cc                _fini
+ .fini          0x00000000080006d0        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+                0x00000000080006d8                . = ALIGN (0x4)
+                0x00000000080006d8                _etext = .
 
-.vfp11_veneer   0x00000000080006dc        0x0
- .vfp11_veneer  0x00000000080006dc        0x0 linker stubs
+.vfp11_veneer   0x00000000080006d8        0x0
+ .vfp11_veneer  0x00000000080006d8        0x0 linker stubs
 
-.v4_bx          0x00000000080006dc        0x0
- .v4_bx         0x00000000080006dc        0x0 linker stubs
+.v4_bx          0x00000000080006d8        0x0
+ .v4_bx         0x00000000080006d8        0x0 linker stubs
 
-.iplt           0x00000000080006dc        0x0
- .iplt          0x00000000080006dc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x00000000080006d8        0x0
+ .iplt          0x00000000080006d8        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x00000000080006dc       0x1c
-                0x00000000080006dc                . = ALIGN (0x4)
+.rodata         0x00000000080006d8       0x1c
+                0x00000000080006d8                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x00000000080006dc       0x18 build/system_stm32f4xx.o
-                0x00000000080006dc                AHBPrescTable
-                0x00000000080006ec                APBPrescTable
- .rodata        0x00000000080006f4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                0x00000000080006f4                _global_impure_ptr
+ .rodata        0x00000000080006d8       0x18 build/system_stm32f4xx.o
+                0x00000000080006d8                AHBPrescTable
+                0x00000000080006e8                APBPrescTable
+ .rodata        0x00000000080006f0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x00000000080006f0                _global_impure_ptr
  *(.rodata*)
-                0x00000000080006f8                . = ALIGN (0x4)
+                0x00000000080006f4                . = ALIGN (0x4)
 
-.ARM.extab      0x00000000080006f8        0x0
-                0x00000000080006f8                . = ALIGN (0x4)
+.ARM.extab      0x00000000080006f4        0x0
+                0x00000000080006f4                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000080006f8                . = ALIGN (0x4)
+                0x00000000080006f4                . = ALIGN (0x4)
 
-.ARM            0x00000000080006f8        0x0
-                0x00000000080006f8                . = ALIGN (0x4)
-                0x00000000080006f8                __exidx_start = .
+.ARM            0x00000000080006f4        0x0
+                0x00000000080006f4                . = ALIGN (0x4)
+                0x00000000080006f4                __exidx_start = .
  *(.ARM.exidx*)
-                0x00000000080006f8                __exidx_end = .
-                0x00000000080006f8                . = ALIGN (0x4)
+                0x00000000080006f4                __exidx_end = .
+                0x00000000080006f4                . = ALIGN (0x4)
 
-.preinit_array  0x00000000080006f8        0x0
-                0x00000000080006f8                . = ALIGN (0x4)
-                0x00000000080006f8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00000000080006f4        0x0
+                0x00000000080006f4                . = ALIGN (0x4)
+                0x00000000080006f4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x00000000080006f8                PROVIDE (__preinit_array_end = .)
-                0x00000000080006f8                . = ALIGN (0x4)
+                0x00000000080006f4                PROVIDE (__preinit_array_end = .)
+                0x00000000080006f4                . = ALIGN (0x4)
 
-.init_array     0x00000000080006f8        0x8
-                0x00000000080006f8                . = ALIGN (0x4)
-                0x00000000080006f8                PROVIDE (__init_array_start = .)
+.init_array     0x00000000080006f4        0x8
+                0x00000000080006f4                . = ALIGN (0x4)
+                0x00000000080006f4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x00000000080006f8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x00000000080006f4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x00000000080006fc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008000700                PROVIDE (__init_array_end = .)
-                0x0000000008000700                . = ALIGN (0x4)
+ .init_array    0x00000000080006f8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x00000000080006fc                PROVIDE (__init_array_end = .)
+                0x00000000080006fc                . = ALIGN (0x4)
 
-.fini_array     0x0000000008000700        0x4
-                0x0000000008000700                . = ALIGN (0x4)
-                0x0000000008000700                PROVIDE (__fini_array_start = .)
+.fini_array     0x00000000080006fc        0x4
+                0x00000000080006fc                . = ALIGN (0x4)
+                0x00000000080006fc                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008000700        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008000704                PROVIDE (__fini_array_end = .)
-                0x0000000008000704                . = ALIGN (0x4)
-                0x0000000008000704                _sidata = LOADADDR (.data)
+ .fini_array    0x00000000080006fc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008000700                PROVIDE (__fini_array_end = .)
+                0x0000000008000700                . = ALIGN (0x4)
+                0x0000000008000700                _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0000000008000704        0x0
- .rel.iplt      0x0000000008000704        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008000700        0x0
+ .rel.iplt      0x0000000008000700        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x0000000020000000      0x438 load address 0x0000000008000704
+.data           0x0000000020000000      0x438 load address 0x0000000008000700
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
-=======
- .text.deregister_tm_clones
-                0x080002f0       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .text.register_tm_clones
-                0x0800030c       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .text.__do_global_dtors_aux
-                0x08000330       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .text.frame_dummy
-                0x08000358       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- .text.SysTick_init
-                0x0800037c       0x38 build/timer.o
-                0x0800037c                SysTick_init
- .text.DWT_init
-                0x080003b4       0x34 build/timer.o
-                0x080003b4                DWT_init
- .text.SysTick_Handler
-                0x080003e8       0x1c build/timer.o
-                0x080003e8                SysTick_Handler
- .text._delay_ms
-                0x08000404       0x30 build/timer.o
-                0x08000404                _delay_ms
- .text.gpio_init
-                0x08000434       0x44 build/main.o
-                0x08000434                gpio_init
- .text.main     0x08000478       0x54 build/main.o
-                0x08000478                main
- .text.PLL_enable
-                0x080004cc       0xa8 build/rcc.o
-                0x080004cc                PLL_enable
- .text.Reset_Handler
-                0x08000574       0x50 startup_stm32f401rctx.o
-                0x08000574                Reset_Handler
- .text.Default_Handler
-                0x080005c4        0x2 startup_stm32f401rctx.o
-                0x080005c4                RTC_Alarm_IRQHandler
-                0x080005c4                EXTI2_IRQHandler
-                0x080005c4                DebugMon_Handler
-                0x080005c4                SPI4_IRQHandler
-                0x080005c4                TIM1_CC_IRQHandler
-                0x080005c4                DMA2_Stream5_IRQHandler
-                0x080005c4                HardFault_Handler
-                0x080005c4                DMA1_Stream5_IRQHandler
-                0x080005c4                PVD_IRQHandler
-                0x080005c4                SDIO_IRQHandler
-                0x080005c4                TAMP_STAMP_IRQHandler
-                0x080005c4                PendSV_Handler
-                0x080005c4                NMI_Handler
-                0x080005c4                EXTI3_IRQHandler
-                0x080005c4                TIM1_UP_TIM10_IRQHandler
-                0x080005c4                I2C3_ER_IRQHandler
-                0x080005c4                EXTI0_IRQHandler
-                0x080005c4                I2C2_EV_IRQHandler
-                0x080005c4                DMA1_Stream2_IRQHandler
-                0x080005c4                FPU_IRQHandler
-                0x080005c4                UsageFault_Handler
-                0x080005c4                DMA2_Stream2_IRQHandler
-                0x080005c4                SPI1_IRQHandler
-                0x080005c4                TIM1_BRK_TIM9_IRQHandler
-                0x080005c4                DMA2_Stream3_IRQHandler
-                0x080005c4                USART6_IRQHandler
-                0x080005c4                DMA2_Stream0_IRQHandler
-                0x080005c4                TIM4_IRQHandler
-                0x080005c4                I2C1_EV_IRQHandler
-                0x080005c4                DMA1_Stream6_IRQHandler
-                0x080005c4                DMA1_Stream1_IRQHandler
-                0x080005c4                TIM3_IRQHandler
-                0x080005c4                RCC_IRQHandler
-                0x080005c4                Default_Handler
-                0x080005c4                EXTI15_10_IRQHandler
-                0x080005c4                ADC_IRQHandler
-                0x080005c4                DMA1_Stream7_IRQHandler
-                0x080005c4                TIM5_IRQHandler
-                0x080005c4                DMA2_Stream7_IRQHandler
-                0x080005c4                I2C3_EV_IRQHandler
-                0x080005c4                EXTI9_5_IRQHandler
-                0x080005c4                RTC_WKUP_IRQHandler
-                0x080005c4                SPI2_IRQHandler
-                0x080005c4                MemManage_Handler
-                0x080005c4                DMA1_Stream0_IRQHandler
-                0x080005c4                SVC_Handler
-                0x080005c4                EXTI4_IRQHandler
-                0x080005c4                WWDG_IRQHandler
-                0x080005c4                TIM2_IRQHandler
-                0x080005c4                OTG_FS_WKUP_IRQHandler
-                0x080005c4                TIM1_TRG_COM_TIM11_IRQHandler
-                0x080005c4                EXTI1_IRQHandler
-                0x080005c4                USART2_IRQHandler
-                0x080005c4                I2C2_ER_IRQHandler
-                0x080005c4                DMA2_Stream1_IRQHandler
-                0x080005c4                FLASH_IRQHandler
-                0x080005c4                DMA2_Stream4_IRQHandler
-                0x080005c4                BusFault_Handler
-                0x080005c4                USART1_IRQHandler
-                0x080005c4                OTG_FS_IRQHandler
-                0x080005c4                SPI3_IRQHandler
-                0x080005c4                DMA1_Stream4_IRQHandler
-                0x080005c4                I2C1_ER_IRQHandler
-                0x080005c4                DMA2_Stream6_IRQHandler
-                0x080005c4                DMA1_Stream3_IRQHandler
- *fill*         0x080005c6        0x2 
- .text.__libc_init_array
-                0x080005c8       0x50 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-init.o)
-                0x080005c8                __libc_init_array
- .text.__retarget_lock_acquire_recursive
-                0x08000618        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
-                0x08000618                __retarget_lock_acquire_recursive
- .text.__retarget_lock_release_recursive
-                0x0800061c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
-                0x0800061c                __retarget_lock_release_recursive
- .text.startup.register_fini
-                0x08000620       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
- .text.atexit   0x08000634        0xc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-atexit.o)
-                0x08000634                atexit
- .text.__libc_fini_array
-                0x08000640       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-fini.o)
-                0x08000640                __libc_fini_array
- .text.__register_exitproc
-                0x08000668       0x80 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__atexit.o)
-                0x08000668                __register_exitproc
- *(.glue_7)
- .glue_7        0x080006e8        0x0 linker stubs
- *(.glue_7t)
- .glue_7t       0x080006e8        0x0 linker stubs
- *(.eh_frame)
- .eh_frame      0x080006e8        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
- *(.init)
- .init          0x080006e8        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
-                0x080006e8                _init
- .init          0x080006ec        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
- *(.fini)
- .fini          0x080006f4        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crti.o
-                0x080006f4                _fini
- .fini          0x080006f8        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtn.o
-                0x08000700                        . = ALIGN (0x4)
-                0x08000700                        _etext = .
-
-.vfp11_veneer   0x08000700        0x0
- .vfp11_veneer  0x08000700        0x0 linker stubs
-
-.v4_bx          0x08000700        0x0
- .v4_bx         0x08000700        0x0 linker stubs
-
-.iplt           0x08000700        0x0
- .iplt          0x08000700        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-
-.rodata         0x08000700       0x18
-                0x08000700                        . = ALIGN (0x4)
- *(.rodata)
- .rodata        0x08000700       0x18 build/system_stm32f4xx.o
-                0x08000700                AHBPrescTable
-                0x08000710                APBPrescTable
- *(.rodata*)
-                0x08000718                        . = ALIGN (0x4)
-
-.ARM.extab      0x08000718        0x0
-                0x08000718                        . = ALIGN (0x4)
- *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000718                        . = ALIGN (0x4)
-
-.ARM            0x08000718        0x0
-                0x08000718                        . = ALIGN (0x4)
-                0x08000718                        __exidx_start = .
- *(.ARM.exidx*)
-                0x08000718                        __exidx_end = .
-                0x08000718                        . = ALIGN (0x4)
-
-.preinit_array  0x08000718        0x0
-                0x08000718                        . = ALIGN (0x4)
-                0x08000718                        PROVIDE (__preinit_array_start = .)
- *(.preinit_array*)
-                0x08000718                        PROVIDE (__preinit_array_end = .)
-                0x08000718                        . = ALIGN (0x4)
-
-.init_array     0x08000718        0x8
-                0x08000718                        . = ALIGN (0x4)
-                0x08000718                        PROVIDE (__init_array_start = .)
- *(SORT_BY_NAME(.init_array.*))
- .init_array.00000
-                0x08000718        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
- *(.init_array*)
- .init_array    0x0800071c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08000720                        PROVIDE (__init_array_end = .)
-                0x08000720                        . = ALIGN (0x4)
-
-.fini_array     0x08000720        0x4
-                0x08000720                        . = ALIGN (0x4)
-                0x08000720                        PROVIDE (__fini_array_start = .)
- *(SORT_BY_NAME(.fini_array.*))
- *(.fini_array*)
- .fini_array    0x08000720        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08000724                        PROVIDE (__fini_array_end = .)
-                0x08000724                        . = ALIGN (0x4)
-                0x08000724                        _sidata = LOADADDR (.data)
-
-.rel.dyn        0x08000724        0x0
- .rel.iplt      0x08000724        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-
-.data           0x20000000        0x8 load address 0x08000724
-                0x20000000                        . = ALIGN (0x4)
-                0x20000000                        _sdata = .
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  *(.data)
  .data          0x0000000020000000        0x4 build/system_stm32f4xx.o
                 0x0000000020000000                SystemCoreClock
@@ -1266,33 +718,19 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000438                _edata = .
 
 .tm_clone_table
-<<<<<<< HEAD
-                0x0000000020000438        0x0 load address 0x0000000008000b3c
-=======
-                0x20000008        0x0 load address 0x0800072c
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
+                0x0000000020000438        0x0 load address 0x0000000008000b38
  .tm_clone_table
                 0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-<<<<<<< HEAD
-.igot.plt       0x0000000020000438        0x0 load address 0x0000000008000b3c
+.igot.plt       0x0000000020000438        0x0 load address 0x0000000008000b38
  .igot.plt      0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x0000000020000438                . = ALIGN (0x4)
 
-.bss            0x0000000020000438       0x20 load address 0x0000000008000b3c
+.bss            0x0000000020000438       0x20 load address 0x0000000008000b38
                 0x0000000020000438                _sbss = .
                 0x0000000020000438                __bss_start__ = _sbss
-=======
-.igot.plt       0x20000008        0x0 load address 0x0800072c
- .igot.plt      0x20000008        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x20000008                        . = ALIGN (0x4)
-
-.bss            0x20000008      0x1b8 load address 0x0800072c
-                0x20000008                        _sbss = .
-                0x20000008                        __bss_start__ = _sbss
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  *(.bss)
  .bss           0x0000000020000438       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  *(.bss*)
@@ -1304,15 +742,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000458                __bss_end__ = _ebss
 
 ._user_heap_stack
-<<<<<<< HEAD
-                0x0000000020000458      0x600 load address 0x0000000008000b3c
+                0x0000000020000458      0x600 load address 0x0000000008000b38
                 0x0000000020000458                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-=======
-                0x200001c0      0x600 load address 0x0800072c
-                0x200001c0                        . = ALIGN (0x8)
-                0x200001c0                        PROVIDE (end = .)
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
                 [!provide]                        PROVIDE (_end = .)
                 0x0000000020000658                . = (. + _Min_Heap_Size)
  *fill*         0x0000000020000458      0x200 
@@ -1333,19 +765,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .ARM.attributes
                 0x000000000000001e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .ARM.attributes
-<<<<<<< HEAD
                 0x000000000000004c       0x2e build/main.o
  .ARM.attributes
                 0x000000000000007a       0x2e build/rcc.o
  .ARM.attributes
                 0x00000000000000a8       0x2e build/timer.o
-=======
-                0x0000004c       0x2e build/timer.o
- .ARM.attributes
-                0x0000007a       0x2e build/main.o
- .ARM.attributes
-                0x000000a8       0x2e build/rcc.o
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  .ARM.attributes
                 0x00000000000000d6       0x2e build/system_stm32f4xx.o
  .ARM.attributes
@@ -1372,14 +796,13 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/no
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
 
-<<<<<<< HEAD
 .comment        0x0000000000000000       0x79
  .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
                                          0x34 (size before relaxing)
  .comment       0x0000000000000033       0x34 build/main.o
  .comment       0x0000000000000033       0x46 build/rcc.o
                                          0x47 (size before relaxing)
- .comment       0x0000000000000079       0x47 build/timer.o
+ .comment       0x0000000000000079       0x34 build/timer.o
  .comment       0x0000000000000079       0x47 build/system_stm32f4xx.o
  .comment       0x0000000000000079       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
  .comment       0x0000000000000079       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
@@ -1389,62 +812,39 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
  .comment       0x0000000000000079       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  .comment       0x0000000000000079       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000     0x2f0c
+.debug_info     0x0000000000000000     0x2f51
  .debug_info    0x0000000000000000      0x359 build/main.o
  .debug_info    0x0000000000000359      0x2ed build/rcc.o
- .debug_info    0x0000000000000646      0x32c build/timer.o
- .debug_info    0x0000000000000972      0x537 build/system_stm32f4xx.o
- .debug_info    0x0000000000000ea9       0x30 startup_stm32f401rctx.o
- .debug_info    0x0000000000000ed9      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_info    0x0000000000000fd9      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_info    0x00000000000010db      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_info    0x0000000000001a05      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_info    0x0000000000001b1f      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_info    0x00000000000024cf      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
-=======
-.debug_info     0x00000000      0xebe
- .debug_info    0x00000000      0x32c build/timer.o
- .debug_info    0x0000032c      0x33e build/main.o
- .debug_info    0x0000066a      0x2ed build/rcc.o
- .debug_info    0x00000957      0x537 build/system_stm32f4xx.o
- .debug_info    0x00000e8e       0x30 startup_stm32f401rctx.o
+ .debug_info    0x0000000000000646      0x371 build/timer.o
+ .debug_info    0x00000000000009b7      0x537 build/system_stm32f4xx.o
+ .debug_info    0x0000000000000eee       0x30 startup_stm32f401rctx.o
+ .debug_info    0x0000000000000f1e      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000101e      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .debug_info    0x0000000000001120      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000001a4a      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+ .debug_info    0x0000000000001b64      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000002514      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
-.debug_abbrev   0x00000000      0x4b4
- .debug_abbrev  0x00000000      0x149 build/timer.o
- .debug_abbrev  0x00000149      0x117 build/main.o
- .debug_abbrev  0x00000260      0x116 build/rcc.o
- .debug_abbrev  0x00000376      0x11a build/system_stm32f4xx.o
- .debug_abbrev  0x00000490       0x24 startup_stm32f401rctx.o
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
-
-.debug_abbrev   0x0000000000000000      0xd5f
+.debug_abbrev   0x0000000000000000      0xd44
  .debug_abbrev  0x0000000000000000       0xc9 build/main.o
- .debug_abbrev  0x00000000000000c9      0x114 build/rcc.o
- .debug_abbrev  0x00000000000001dd      0x149 build/timer.o
- .debug_abbrev  0x0000000000000326      0x11a build/system_stm32f4xx.o
- .debug_abbrev  0x0000000000000440       0x24 startup_stm32f401rctx.o
- .debug_abbrev  0x0000000000000464       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_abbrev  0x000000000000051b       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_abbrev  0x00000000000005ea      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_abbrev  0x00000000000007a2       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_abbrev  0x000000000000086e      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x0000000000000aad      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00000000000000c9      0x116 build/rcc.o
+ .debug_abbrev  0x00000000000001df      0x12c build/timer.o
+ .debug_abbrev  0x000000000000030b      0x11a build/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000425       0x24 startup_stm32f401rctx.o
+ .debug_abbrev  0x0000000000000449       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000000500       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .debug_abbrev  0x00000000000005cf      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000000787       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+ .debug_abbrev  0x0000000000000853      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000000a92      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
 .debug_aranges  0x0000000000000000      0x1a0
  .debug_aranges
-<<<<<<< HEAD
                 0x0000000000000000       0x28 build/main.o
  .debug_aranges
                 0x0000000000000028       0x30 build/rcc.o
  .debug_aranges
                 0x0000000000000058       0x40 build/timer.o
-=======
-                0x00000000       0x40 build/timer.o
- .debug_aranges
-                0x00000040       0x28 build/main.o
- .debug_aranges
-                0x00000068       0x30 build/rcc.o
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
  .debug_aranges
                 0x0000000000000098       0x20 build/system_stm32f4xx.o
  .debug_aranges
@@ -1462,11 +862,12 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
  .debug_aranges
                 0x0000000000000178       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
-.debug_ranges   0x0000000000000000       0x68
+.debug_ranges   0x0000000000000000       0x98
  .debug_ranges  0x0000000000000000       0x18 build/main.o
- .debug_ranges  0x0000000000000018       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .debug_ranges  0x0000000000000018       0x30 build/timer.o
+ .debug_ranges  0x0000000000000048       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
-.debug_macro    0x0000000000000000    0x107d6
+.debug_macro    0x0000000000000000    0x1083e
  .debug_macro   0x0000000000000000      0x271 build/main.o
  .debug_macro   0x0000000000000271      0xa60 build/main.o
  .debug_macro   0x0000000000000cd1      0x34e build/main.o
@@ -1539,21 +940,21 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
  .debug_macro   0x0000000000010357      0x146 build/rcc.o
  .debug_macro   0x000000000001049d       0x3c build/rcc.o
  .debug_macro   0x00000000000104d9       0x10 build/rcc.o
- .debug_macro   0x00000000000104e9      0x20d build/timer.o
- .debug_macro   0x00000000000106f6       0xe0 build/system_stm32f4xx.o
+ .debug_macro   0x00000000000104e9      0x275 build/timer.o
+ .debug_macro   0x000000000001075e       0xe0 build/system_stm32f4xx.o
 
-.debug_line     0x0000000000000000     0x1974
- .debug_line    0x0000000000000000      0x378 build/main.o
- .debug_line    0x0000000000000378      0x51e build/rcc.o
- .debug_line    0x0000000000000896      0x4c3 build/timer.o
- .debug_line    0x0000000000000d59      0x3a6 build/system_stm32f4xx.o
- .debug_line    0x00000000000010ff       0x7a startup_stm32f401rctx.o
- .debug_line    0x0000000000001179       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_line    0x0000000000001239       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_line    0x0000000000001326       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_line    0x000000000000140a      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_line    0x0000000000001542      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_line    0x00000000000016e0      0x294 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+.debug_line     0x0000000000000000     0x18ad
+ .debug_line    0x0000000000000000      0x376 build/main.o
+ .debug_line    0x0000000000000376      0x536 build/rcc.o
+ .debug_line    0x00000000000008ac      0x3e6 build/timer.o
+ .debug_line    0x0000000000000c92      0x3a6 build/system_stm32f4xx.o
+ .debug_line    0x0000000000001038       0x7a startup_stm32f401rctx.o
+ .debug_line    0x00000000000010b2       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000001172       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .debug_line    0x000000000000125f       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000001343      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+ .debug_line    0x000000000000147b      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000001619      0x294 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
 .debug_str      0x0000000000000000    0x55a7c
  .debug_str     0x0000000000000000    0x534dd build/main.o
@@ -1561,7 +962,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
  .debug_str     0x00000000000534dd     0x1b00 build/rcc.o
                                       0x534e4 (size before relaxing)
  .debug_str     0x0000000000054fdd      0x132 build/timer.o
-                                      0x534d4 (size before relaxing)
+                                      0x5374b (size before relaxing)
  .debug_str     0x000000000005510f      0x199 build/system_stm32f4xx.o
                                       0x4f9f8 (size before relaxing)
  .debug_str     0x00000000000552a8       0x41 startup_stm32f401rctx.o
@@ -1591,104 +992,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
  .debug_frame   0x0000000000000280       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
 
 .debug_rnglists
-                0x0000000000000000       0x64
+                0x0000000000000000       0x39
  .debug_rnglists
-<<<<<<< HEAD
                 0x0000000000000000       0x20 build/rcc.o
  .debug_rnglists
-                0x0000000000000020       0x2b build/timer.o
- .debug_rnglists
-                0x000000000000004b       0x19 startup_stm32f401rctx.o
-=======
-                0x00000000       0x2b build/timer.o
- .debug_rnglists
-                0x0000002b       0x19 build/main.o
- .debug_rnglists
-                0x00000044       0x20 build/rcc.o
- .debug_rnglists
-                0x00000064       0x19 startup_stm32f401rctx.o
-
-.debug_macro    0x00000000     0xed36
- .debug_macro   0x00000000      0x20d build/timer.o
- .debug_macro   0x0000020d      0xac0 build/timer.o
- .debug_macro   0x00000ccd       0x22 build/timer.o
- .debug_macro   0x00000cef       0x8e build/timer.o
- .debug_macro   0x00000d7d       0x51 build/timer.o
- .debug_macro   0x00000dce      0x103 build/timer.o
- .debug_macro   0x00000ed1       0x6a build/timer.o
- .debug_macro   0x00000f3b      0x1df build/timer.o
- .debug_macro   0x0000111a       0x61 build/timer.o
- .debug_macro   0x0000117b       0x24 build/timer.o
- .debug_macro   0x0000119f       0x43 build/timer.o
- .debug_macro   0x000011e2       0x34 build/timer.o
- .debug_macro   0x00001216       0x16 build/timer.o
- .debug_macro   0x0000122c       0x9e build/timer.o
- .debug_macro   0x000012ca      0x364 build/timer.o
- .debug_macro   0x0000162e      0x112 build/timer.o
- .debug_macro   0x00001740       0x10 build/timer.o
- .debug_macro   0x00001750       0x16 build/timer.o
- .debug_macro   0x00001766       0x4a build/timer.o
- .debug_macro   0x000017b0       0x34 build/timer.o
- .debug_macro   0x000017e4       0x10 build/timer.o
- .debug_macro   0x000017f4       0x58 build/timer.o
- .debug_macro   0x0000184c       0x8e build/timer.o
- .debug_macro   0x000018da       0x1c build/timer.o
- .debug_macro   0x000018f6      0x17e build/timer.o
- .debug_macro   0x00001a74       0x16 build/timer.o
- .debug_macro   0x00001a8a       0x16 build/timer.o
- .debug_macro   0x00001aa0      0x146 build/timer.o
- .debug_macro   0x00001be6       0x16 build/timer.o
- .debug_macro   0x00001bfc       0x3c build/timer.o
- .debug_macro   0x00001c38       0x16 build/timer.o
- .debug_macro   0x00001c4e       0x29 build/timer.o
- .debug_macro   0x00001c77       0x2e build/timer.o
- .debug_macro   0x00001ca5       0x28 build/timer.o
- .debug_macro   0x00001ccd       0x1c build/timer.o
- .debug_macro   0x00001ce9       0x22 build/timer.o
- .debug_macro   0x00001d0b       0xfb build/timer.o
- .debug_macro   0x00001e06     0x1011 build/timer.o
- .debug_macro   0x00002e17      0x11f build/timer.o
- .debug_macro   0x00002f36     0xb881 build/timer.o
- .debug_macro   0x0000e7b7       0x6d build/timer.o
- .debug_macro   0x0000e824       0x16 build/timer.o
- .debug_macro   0x0000e83a      0x209 build/main.o
- .debug_macro   0x0000ea43      0x213 build/rcc.o
- .debug_macro   0x0000ec56       0xe0 build/system_stm32f4xx.o
-
-.debug_line     0x00000000     0x1266
- .debug_line    0x00000000      0x4c3 build/timer.o
- .debug_line    0x000004c3      0x44d build/main.o
- .debug_line    0x00000910      0x536 build/rcc.o
- .debug_line    0x00000e46      0x3a6 build/system_stm32f4xx.o
- .debug_line    0x000011ec       0x7a startup_stm32f401rctx.o
-
-.debug_str      0x00000000    0x53638
- .debug_str     0x00000000    0x53638 build/timer.o
-                              0x534d4 (size before relaxing)
- .debug_str     0x00053638    0x534e3 build/main.o
- .debug_str     0x00053638    0x534e4 build/rcc.o
- .debug_str     0x00053638    0x4f9f8 build/system_stm32f4xx.o
- .debug_str     0x00053638       0x70 startup_stm32f401rctx.o
-
-.comment        0x00000000       0x46
- .comment       0x00000000       0x46 build/timer.o
-                                 0x47 (size before relaxing)
- .comment       0x00000046       0x47 build/main.o
- .comment       0x00000046       0x47 build/rcc.o
- .comment       0x00000046       0x47 build/system_stm32f4xx.o
-
-.debug_frame    0x00000000      0x38c
- .debug_frame   0x00000000       0xbc build/timer.o
- .debug_frame   0x000000bc       0x4c build/main.o
- .debug_frame   0x00000108       0x6c build/rcc.o
- .debug_frame   0x00000174       0x58 build/system_stm32f4xx.o
- .debug_frame   0x000001cc       0x2c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-init.o)
- .debug_frame   0x000001f8       0xb0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-lock.o)
- .debug_frame   0x000002a8       0x5c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__call_atexit.o)
- .debug_frame   0x00000304       0x20 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-atexit.o)
- .debug_frame   0x00000324       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-fini.o)
- .debug_frame   0x00000358       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(libc_a-__atexit.o)
->>>>>>> 6beaf0784a0003eedf7eb51e7f87f407967314cc
+                0x0000000000000020       0x19 startup_stm32f401rctx.o
 
 .debug_line_str
                 0x0000000000000000       0x54

@@ -1,0 +1,4 @@
+dht11.c:3:6:dht_request	8	static
+dht11.c:15:6:dht_response	8	static
+dht11.c:25:9:dht_receive_data	16	static
+dht11.c:51:6:dht_write_data	40	static

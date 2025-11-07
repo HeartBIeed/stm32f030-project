@@ -14,6 +14,7 @@
 #include "rcc.h"
 #include "uart.h"
 #include "timer.h"
+#include "dht11.h"
 
 
 #endif /* MAIN_H_ */

@@ -10,7 +10,7 @@ int main(void)
 
 
 
-	UART_init(9600u);
+	UART_init(9600);
 
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 
 	RCC->AHBENR |= RCC_AHBENR_GPIOBEN; 
@@ -25,7 +25,6 @@ int main(void)
 //						 PB input 00
 
 	GPIOB->MODER &= ~( 0xFF << (1*2));// 1 
-	GPIOB->MODER |= ( 0x01 << (3*2)); // 3
 	GPIOB->PUPDR |= ( 0x01 << (1*2)); //1 / up 01
 
 //  output 01 input 00
@@ -36,61 +35,16 @@ int main(void)
 
 	usart1_ptr_str("UART EN");
 
+	char data[16];
 
  while( 1 )
 	{
 
-/*
-	GPIOA->ODR |= (1 << 5);
-	_delay_ms(2000);
-
-
-	GPIOA->ODR &= ~(1 << 5);
-	_delay_ms(2000);
-
-*/
-
-uint8_t data = usart1_recieve_byte();		
-
-	if ( data == '6') 
-		{
-			GPIOA->ODR |= (1 << 6);
-		}
-
-	else if (data == '7') 
-		{
-			GPIOA->ODR |= (1 << 7);
-		}
-
-	else if (data == 's') 
-		{
-			usart1_ptr_str("string");
-		}
-
-	else
-		{
-		usart1_echo();
-		}
-
-/*-----------------------------------------------------------------------------
-		if ((GPIOB->IDR & (1<<1))==0)
-			{
-			GPIOA->ODR |= (1 << 15);
-			GPIOB->ODR &= ~(1 << 3);
-		usart1_ptr_str("yellow");
-
-
-			}
-		else 
-			{
-			GPIOA->ODR &= ~(1 << 15);
-			GPIOB->ODR |= (1 << 3);
-		usart1_ptr_str("Green");
-
-			}
-
---------------------------------------------------------
-*/
+	dht_write_data(data);
+	
+	_delay_ms(3000);
+	usart1_ptr_str(data);
+	
 	}
 }
 
