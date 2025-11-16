@@ -10,6 +10,8 @@ void dht_request() //start down-up
 		SET_BIT(GPIOA->ODR,4);
 		_delay_us(30);
 
+	usart1_ptr_str("request");
+
 	}
 
 void dht_response(void) //ответ - ждем up-down-up
@@ -19,6 +21,7 @@ void dht_response(void) //ответ - ждем up-down-up
 		while (READ_BIT(GPIOA->IDR, 4)); // ожидание 1
 		while ((READ_BIT(GPIOA->IDR,4))==0); // ожидание 0
 		while (READ_BIT(GPIOA->IDR,4));
+	usart1_ptr_str("response");
 
 	}
 
@@ -44,6 +47,7 @@ uint8_t dht_receive_data() //получаем байт
 			}
 
 		}
+	usart1_ptr_str("receive_data");
 
 	return c;
 	}
@@ -65,7 +69,12 @@ void dht_write_data(char* data)
 		CSUMM = ((I_RH + D_RH + I_TEMP + D_TEMP) & 0xFF);
 
 		if (C_SUMM_GET == CSUMM) sprintf(data,"%d %d", I_RH,I_TEMP);
-		else sprintf(data,"ERR");
+		else 
+			{
+				sprintf(data,"ERR");
+			    usart1_ptr_str("error");
+}
+
 	}
 
 

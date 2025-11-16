@@ -6,7 +6,7 @@ int main(void)
 
 	SystemClock_HSE_8MHz();
 	SysTick_init();
-	SysTick_Handler();
+	
 
 
 
@@ -24,8 +24,8 @@ int main(void)
 
 //						 PB input 00
 
-	GPIOB->MODER &= ~( 0xFF << (1*2));// 1 
-	GPIOB->PUPDR |= ( 0x01 << (1*2)); //1 / up 01
+	GPIOB->MODER &= ~( 3 << (1*2));// 1 
+	GPIOB->PUPDR |= ( 1 << (1*2)); //1 / up 01
 
 //  output 01 input 00
 
@@ -44,7 +44,8 @@ int main(void)
 	
 	_delay_ms(3000);
 	usart1_ptr_str(data);
-	
+	usart1_ptr_str("\r\n");
+
 	}
 }
 
