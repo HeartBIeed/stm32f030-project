@@ -3,6 +3,7 @@
 
 #include "main.h"
 
+#define FCPU 84000000u
 #define U1RX 10
 #define U1TX 9
 
@@ -12,6 +13,7 @@ uint8_t usart1_recieve_byte();
 void usart1_rxen_flag();
 void usart1_ptr_str(char *str);
 void usart1_echo();
+void get_usart_command();
 
 extern volatile uint8_t uart1_flag;
 

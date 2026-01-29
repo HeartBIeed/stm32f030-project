@@ -45,12 +45,17 @@ void PLL_enable() //84 MHz from HSE 25 MHz
     FLASH->ACR |= FLASH_ACR_ICEN | FLASH_ACR_DCEN | FLASH_ACR_LATENCY_2WS; // cache / 2 tact flash
 
     //div bus
-    RCC->CFGR |= (0b0<<RCC_CFGR_HPRE_Pos); // AHB /1
-    RCC->CFGR |= (0b101<<RCC_CFGR_PPRE1_Pos); // AHB1 /4
-    RCC->CFGR |= (0b100<<RCC_CFGR_PPRE2_Pos); // AHB2 /2
-    // 0b110 /8 and 0b111 /16
-
-
+    RCC->CFGR |= (0b0<<RCC_CFGR_HPRE_Pos); // APB /1
+    RCC->CFGR |= (0b101<<RCC_CFGR_PPRE1_Pos); // APB1 /4
+    RCC->CFGR |= (0b100<<RCC_CFGR_PPRE2_Pos); // APB2 /2
+    
+/* Делители:
+    0b000	/1
+    0b100	/2
+    0b101	/4
+    0b110	/8
+    0b111	/16
+*/
     RCC->CFGR &= ~RCC_CFGR_SW;
     RCC->CFGR |= RCC_CFGR_SW_PLL; //PLL as system clock
     while ((RCC->CFGR & RCC_CFGR_SWS)!=RCC_CFGR_SWS_PLL); //wait switched SC to PLL

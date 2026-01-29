@@ -8,6 +8,7 @@ void DWT_init();
 void SysTick_Handler();
 void _delay_ms(uint32_t ms);
 void _delay_us(uint32_t us);
+uint32_t get_mills();
 
 extern volatile uint32_t ms_ticks;
 

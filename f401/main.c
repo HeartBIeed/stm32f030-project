@@ -26,24 +26,46 @@ int main(void)
 //	for (volatile int i=0; i<100000; i++);
 
 	PLL_enable();
+//SystemClock_HSI_8MHz();
 
 	SysTick_init();
 	DWT_init();
 
-//	UART_init(9600u);
+	UART_init(9600);
 	gpio_init();
 
-//		CLEAR_BIT(GPIOC->ODR, (1 << 13));
-GPIOC->BSRR = (1 << (13 + 16));
-		_delay_ms(1000);
+	CLEAR_BIT(GPIOC->ODR, (1 << 13));
 
+uint32_t start[3] = {0}; // нулевые стартовые значения 
+						 // для неблокирующих задержек
 
  while( 1 )
 	{
-		SET_BIT(GPIOC->ODR, (1 << 13));
+	usart1_rxen_flag();
+	get_usart_command();
+
+
+/*
+	usart1_ptr_str("\033[0;31m RED TEXT \r\n\r\n"); 
+	_delay_ms(10);
+
+	usart1_ptr_str("\033[1;33m YELLOW \r\n\r\n"); 
+	_delay_ms(10);
+
+	usart1_ptr_str("\033[0;32m GREEN \033[0m\r\n\r\n");
 		_delay_ms(1000);
-		CLEAR_BIT(GPIOC->ODR, (1 << 13));
-		_delay_ms(1000);
+
+*/
+
+
+
+
+if (ms_ticks - start[0] >= 1000) 
+	{
+		GPIOC->ODR ^= (1 << 13);
+		start[0] = ms_ticks;
+	}
+
 
 	}
 }

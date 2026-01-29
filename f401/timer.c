@@ -30,6 +30,11 @@ void SysTick_Handler()
 
     }
 
+uint32_t get_mills() // счетчик мс
+    {
+        return ms_ticks;
+    }
+
 void _delay_ms(uint32_t ms)
     {
     uint32_t start = ms_ticks;
