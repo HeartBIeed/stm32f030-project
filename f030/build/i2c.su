@@ -1,0 +1,4 @@
+i2c.c:5:6:I2C_init	8	static
+i2c.c:47:6:I2C_start	16	static
+i2c.c:59:6:I2C_stop	8	static
+i2c.c:65:5:I2C_send_byte	24	static
