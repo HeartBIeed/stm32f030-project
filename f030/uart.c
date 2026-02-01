@@ -3,7 +3,7 @@
 volatile uint8_t uart1_flag = 0;
 
 
-void UART_init(uint16_t speed)
+void UART_init(uint16_t baud)
 {
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 
 	RCC->APB2ENR |= RCC_APB2ENR_USART1EN; //APB bus
@@ -24,12 +24,10 @@ void UART_init(uint16_t speed)
 	USART1->CR1 = 0;
 	USART1->CR2 = 0;
 	USART1->CR3 = 0;
-
-	uint32_t fcpu = 8000000u;
 	
-	USART1->BRR = 0x341; 
+//	USART1->BRR = 0x341; 
 	
-//	USART1->BRR = (uint16_t)((fcpu+(baud/2))/baud); 
+	USART1->BRR = FCPU/baud; 
 
 	USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE; //tx rx usart enable
 
@@ -48,7 +46,7 @@ uint8_t usart1_recieve_byte()
 			{
 				return (uint8_t)USART1->RDR;
 			}
-
+return 0;
 	}
 
 void usart1_rxen_flag()

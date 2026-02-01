@@ -30,21 +30,20 @@ int main(void)
 //  output 01 input 00
 
 
-
 	GPIOA->ODR |= (1 << 5); // PA5 en relay
 
 	usart1_ptr_str("UART EN");
 
-	char data[16];
 
  while( 1 )
 	{
 
-	dht_write_data(data);
-	
-	_delay_ms(3000);
-	usart1_ptr_str(data);
-	usart1_ptr_str("\r\n");
+
+	I2C_send_byte('U',55);
+		_delay_ms(500);
+
+	usart1_ptr_str("I2C SEND");
+		_delay_ms(500);
 
 	}
 }
