@@ -75,7 +75,7 @@ void usart1_echo()
 	
 	}
 
-void usart1_ptr_str(char *str) // TX string
+void usart1_send_str(char *str) // TX string
 	{
 		while (*str) 
 		{

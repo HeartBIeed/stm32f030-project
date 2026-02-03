@@ -1,6 +1,6 @@
 #include "i2c.h"
 
-
+uint32_t timeout;
 
 void I2C_init( )
 {
@@ -8,7 +8,7 @@ void I2C_init( )
 // PB6 - SCL
 // PB7 - SDA
 
-//	RCC->AHBENR |= RCC_AHBENR_GPIOBEN; // GPIOB
+	RCC->AHBENR |= RCC_AHBENR_GPIOBEN; // GPIOB
 	RCC->APB1ENR |= RCC_APB1ENR_I2C1EN; // APB1 I2C1
 
 //MODER 0b10 - 0x02 alt func - 2 bit
@@ -20,6 +20,9 @@ void I2C_init( )
 
 //OTYPER 1- Open Drain  - 1 bit 
 	GPIOB->OTYPER |= ((1<<PB6 )|(1<<PB7 )); 
+
+//pullup	
+//	GPIOB->PUPDR  &= ~((0x3 << (PB6*2)) | (0x3 << (PB7*2)));// no 
 
 //OSPEEDR 10 high 2 - bit
 	GPIOB->OSPEEDR |= ((0x2<<(PB6 *2))|(0x2<<(PB7 *2))); 
@@ -34,12 +37,13 @@ void I2C_init( )
 
 	I2C1->CR1 |= (1<<2); // RX interrupt enable
 	I2C1->CR1 |= (1<<1); // TX interrupt enable
-	I2C1->CR1 |= (1<<0); // PE
 	
-	I2C1->TIMINGR = (0x1<<28)|(0x4<<20)|(0x2<<16)|(0xF<<8)|(0x13<<0);
+	I2C1->TIMINGR = (0x1<<28)|(0x4<<20)|(0x2<<16)|(0x0F<<8)|(0x13<<0);
 // PRESC | SCLDEL | SDADEL | SCLH | SCLL 
 //table 75 from RM
 //setup for fcpu 8MHz / i2c clk 100 kHz
+
+	I2C1->CR1 |= (1<<0); // PE
 
 
 }
@@ -64,7 +68,7 @@ void I2C_stop( )
 
 int I2C_send_byte(char data,int addr)
 	{
-int nbytes = 1;
+	int nbytes = 1;
 
 	I2C_start(addr,nbytes);
 
@@ -79,12 +83,43 @@ int nbytes = 1;
 			return 1;
 	}
 
-/*
-int I2C_read_byte( )
+int I2C_check_address(int addr)
 {
 
+//clear errors
+I2C1->ICR = (1<<4)|(1<<5)|(1<<8)|(1<<9);
+
+		I2C1->CR2 = 0; 
+		
+		I2C1->CR2 |= (0 << 10); // 0 write
+		I2C1->CR2 |= (0 << 16); //nbytes
+		I2C1->CR2 |= (1 << 25); //autoend
+		I2C1->CR2 |= (addr << 1); // set slave address
+		I2C1->CR2 |= (1 << 13); //start 
+
+timeout = TIMEOUT;
+while (!(I2C1->ISR & (I2C_ISR_NACKF | I2C_ISR_STOPF | I2C_ISR_TC))) //wait NACK STOPF TC
+	{
+		if (--timeout == 0) return 0; //none ack
+	}
+
+if (I2C1->ISR & I2C_ISR_NACKF) // if nack
+	{
+	        I2C1->ICR = I2C_ICR_NACKCF | I2C_ICR_STOPCF; //clear flags
+	        return 0; // no device
+
+	}
 
 
-	return 1;
+ timeout = TIMEOUT;
+while (!(I2C1->ISR & I2C_ISR_STOPF )) // wait STOPF 
+	{
+		if (--timeout == 0) break;
+	}
+
+I2C1->ICR = I2C_ICR_STOPCF; //clear stopf
+return 1; 
+
 }
-*/
+
+
