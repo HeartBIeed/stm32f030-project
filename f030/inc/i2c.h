@@ -9,10 +9,10 @@
 #include "main.h"
 
 void I2C_init( );
-void I2C_start(int addr,int nbytes);
-void I2C_stop( );
-int I2C_send_byte(char data,int addr);
 int I2C_check_address(int addr);
+void I2C_read_byte(int addr,char* data,int len);
+void I2C_write_byte(int addr,char* data,int nbytes);
+void I2C_scan();
 
 #define TIMEOUT 1000
 #define PB6 6 

@@ -1,16 +1,6 @@
 #include "main.h"
 
-void I2C_scan()
-	{
-	int addr;
 
-	for (addr = 0x08; addr < 0x77; addr++)
-		{
-			if (I2C_check_address(addr)) usart1_send_str("GET \n\r");
-
-		}
-
-	}
 
 int main(void)
 {
@@ -45,35 +35,49 @@ int main(void)
 
 	usart1_send_str("UART EN");
 
-		_delay_ms(1000);
+
+// ------- init AHT20 ---------
+char init_aht20[3] = {0xBE,0x08,0x00};
+ I2C_write_byte(0x38,init_aht20,3);
+
+char trig[3] = {0xAC, 0x33, 0x00};
+
+//---------------------------
+char buffer[6];
+		_delay_ms(100);
+
 
  while( 1 )
 	{
 
-//	I2C_scan();
-	
-	if (I2C_check_address(0x38)) 
-		{
-			usart1_send_str("GET 38\n\r");
-		}
+if (I2C_check_address(0x38))
+	{
+		usart1_send_str("AHT EN\n\r");
+	}
 
-	else {
-			usart1_send_str("I2C none 38\n\r");
-		}
+else {
+		usart1_send_str("I2C none 0x38\n\r");
+	}
+
+ I2C_write_byte(0x38,trig,3);
+		_delay_ms(100);
+
+I2C_read_byte(0x38,buffer,6);
+
+uint32_t raw_T = 
+(((uint32_t)buffer[3] & 0x0F) << 16 )|
+((uint32_t)buffer[4] << 8) |
+((uint32_t)buffer[5]);
+
+uint32_t Temp = raw_T * 200/2 ^20 - 50;
+
+usart1_send_str((char)Temp);
+
 
 		_delay_ms(500);
 
-	if (I2C_check_address(0x77)) 
-		{
-			usart1_send_str("GET 77 \n\r");
-		}
-
-	else {
-			usart1_send_str("I2C none 77\n\r");
-		}
 
 
-		_delay_ms(500);
 
 	}
 }

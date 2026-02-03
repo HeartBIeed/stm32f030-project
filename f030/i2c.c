@@ -35,8 +35,8 @@ void I2C_init( )
 	I2C1->CR1 = 0;
 	I2C1->CR2 = 0;
 
-	I2C1->CR1 |= (1<<2); // RX interrupt enable
-	I2C1->CR1 |= (1<<1); // TX interrupt enable
+//	I2C1->CR1 |= (1<<2); // RX interrupt enable
+//	I2C1->CR1 |= (1<<1); // TX interrupt enable
 	
 	I2C1->TIMINGR = (0x1<<28)|(0x4<<20)|(0x2<<16)|(0x0F<<8)|(0x13<<0);
 // PRESC | SCLDEL | SDADEL | SCLH | SCLL 
@@ -48,8 +48,10 @@ void I2C_init( )
 
 }
 
-void I2C_start(int addr,int nbytes)
-	{	
+
+void I2C_write_byte(int addr,char* data,int nbytes)
+	{
+
 		I2C1->CR2 = 0; 
 		
 		I2C1->CR2 |= (nbytes<< 16); //nbytes
@@ -57,31 +59,46 @@ void I2C_start(int addr,int nbytes)
 		I2C1->CR2 |= (addr << 1); // set slave address
 		I2C1->CR2 |= (1 << 13); //start 
 
+		while (!(I2C1->ISR & I2C_ISR_TXIS)); //txis 1 - txdr empty
+
+		for (int i = 0; i < nbytes; ++i)
+			{
+				while (!(I2C1->ISR & I2C_ISR_TXIS)); //wait empty tx buffer
+				I2C1->TXDR = data[i];// send 
+
+			}
+
+while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
+I2C1->ICR = I2C_ICR_STOPCF; //clear 
+
 	}
 
-
-void I2C_stop( )
+void I2C_read_byte(int addr,char* data,int len)
 	{
-		I2C1->CR2 |= (1<<14); // stop 
+
+		I2C1->CR2 = 0; 
+		
+		I2C1->CR2 |= (1 << 10); // 1 read
+		I2C1->CR2 |= (len<< 16); //len
+		I2C1->CR2 |= (1 << 25); //autoend
+		I2C1->CR2 |= (addr << 1); // set slave address
+		I2C1->CR2 |= (1 << 13); //start 
+
+
+		for (int i = 0; i < len; ++i)
+			{				
+				while (!(I2C1->ISR & I2C_ISR_RXNE)); //wait transmit
+				data[i] = I2C1->RXDR; // read 
+			}
+while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
+I2C1->ICR = I2C_ICR_STOPCF; //clear 
 
 	}
 
-int I2C_send_byte(char data,int addr)
-	{
-	int nbytes = 1;
 
-	I2C_start(addr,nbytes);
 
-			while (!(I2C1->ISR & I2C_ISR_TXIS)); //txis 1 - txdr empty
 
-		I2C1->TXDR = data; // send 
 
-			while (!(I2C1->ISR & I2C_ISR_STOPF)); //stopf 1 - slave send stop
-
-		I2C1->ICR |= (1<<5); //clear stopf 
-
-			return 1;
-	}
 
 int I2C_check_address(int addr)
 {
@@ -91,7 +108,6 @@ I2C1->ICR = (1<<4)|(1<<5)|(1<<8)|(1<<9);
 
 		I2C1->CR2 = 0; 
 		
-		I2C1->CR2 |= (0 << 10); // 0 write
 		I2C1->CR2 |= (0 << 16); //nbytes
 		I2C1->CR2 |= (1 << 25); //autoend
 		I2C1->CR2 |= (addr << 1); // set slave address
@@ -123,3 +139,14 @@ return 1;
 }
 
 
+void I2C_scan()
+	{
+	int addr;
+
+	for (addr = 0x08; addr < 0x77; addr++)
+		{
+			if (I2C_check_address(addr)) usart1_send_str("GET \n\r");
+
+		}
+
+	}
