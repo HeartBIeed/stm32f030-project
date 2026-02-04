@@ -1,1 +1,2 @@
-main.c:5:5:main	32	static
+main.c:3:6:AHT_to_uart	80	static
+main.c:43:5:main	8	static

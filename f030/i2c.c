@@ -49,7 +49,7 @@ void I2C_init( )
 }
 
 
-void I2C_write_byte(int addr,char* data,int nbytes)
+void I2C_write_byte(int addr,uint8_t* data,int nbytes)
 	{
 
 		I2C1->CR2 = 0; 
@@ -73,7 +73,7 @@ I2C1->ICR = I2C_ICR_STOPCF; //clear
 
 	}
 
-void I2C_read_byte(int addr,char* data,int len)
+void I2C_read_byte(int addr,uint8_t* data,int len)
 	{
 
 		I2C1->CR2 = 0; 

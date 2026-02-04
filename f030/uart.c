@@ -24,20 +24,33 @@ void UART_init(uint16_t baud)
 	USART1->CR1 = 0;
 	USART1->CR2 = 0;
 	USART1->CR3 = 0;
-	
-//	USART1->BRR = 0x341; 
-	
+		
 	USART1->BRR = FCPU/baud; 
 
 	USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE; //tx rx usart enable
 
 }
 
-void usart1_send_byte(uint8_t tx_data)
+void usart1_send_byte(char tx_data)
 	{
 		while ((USART1->ISR & USART_ISR_TXE) == 0);
 	 	USART1->TDR = tx_data;
 	}
+
+
+
+void usart1_send_str(char *str) // TX string
+	{
+		while (*str) 
+		{
+
+		usart1_send_byte((uint8_t)*str++);
+		
+		}
+
+	}
+
+
 
 uint8_t usart1_recieve_byte()
 	{
@@ -48,46 +61,6 @@ uint8_t usart1_recieve_byte()
 			}
 return 0;
 	}
-
-void usart1_rxen_flag()
-	{
-
-	if (USART1->ISR & USART_ISR_RXNE)
-		{
-		uart1_flag = 1;
-		}
-
-		else
-		{
-		uart1_flag =0;
-		}
-		
-	}
-
-
-void usart1_echo()
-	{
-		if (USART1->ISR & USART_ISR_RXNE) // поправить под флаг
-		{
-		usart1_send_byte((uint8_t)USART1->RDR);
-	
-		}
-	
-	}
-
-void usart1_send_str(char *str) // TX string
-	{
-		while (*str) 
-		{
-
-		usart1_send_byte(*str++);
-		
-		}
-
-	}
-
-
-
 
 
 
