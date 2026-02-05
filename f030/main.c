@@ -40,6 +40,22 @@ void AHT_to_uart()
 	string[0] = '\0';
 }
 
+
+void GPIO()
+{
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 
+	RCC->AHBENR |= RCC_AHBENR_GPIOBEN; 
+
+	GPIOA->MODER |= ( 0x01 << (5*2)); // 5 pin/ 01
+// PA output 0x10
+
+	GPIOB->MODER &= ~( 3 << (1*2));// 1 pin
+	GPIOB->PUPDR |= ( 1 << (1*2)); //1 pin / up 01
+// PB input 0x00
+
+
+}
+
 int main(void)
 {
 
@@ -49,19 +65,7 @@ int main(void)
 	I2C_init( );
 	UART_init(9600);
 
-	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 
-	RCC->AHBENR |= RCC_AHBENR_GPIOBEN; 
-//						 PA output(01)
-
-	GPIOA->MODER |= ( 0x01 << (5*2)); // 5 / 01
-	GPIOA->MODER |= ( 0x01 << (6*2)); // 6
-	GPIOA->MODER |= ( 0x01 << (7*2)); // 7
-	GPIOA->MODER |= ( 0x01 << (15*2)); // 15 
-//						 PB input 00
-
-	GPIOB->MODER &= ~( 3 << (1*2));// 1 
-	GPIOB->PUPDR |= ( 1 << (1*2)); //1 / up 01
-//  output 01 input 00
+	GPIO();
 
 	GPIOA->ODR |= (1 << 5); // PA5 en relay
 	usart1_send_str("UART EN");
