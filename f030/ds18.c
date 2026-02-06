@@ -7,6 +7,7 @@ void ds18_init()
 
 	GPIOA->OTYPER |= 0x01; // PA0 open drain
 	GPIOA->OSPEEDR |= (0x10); // PA0 high speed 
+//	GPIOA->PUPDR |= (0x01); // PA0 up  
 
 }
 
@@ -18,18 +19,15 @@ uint8_t ds18_search()
 
 	PA0_OUTPUT; // пин на выход
 	CLEAR_BIT(GPIOA->ODR, 0); // опускаем в 0
-		_delay_us(500);
+		_delay_us(480);
 	SET_BIT(GPIOA->ODR , 0); // поднимаем в 1
-		_delay_us(100);
+		_delay_us(30);
 
 	PA0_INPUT;  // пин на вход
-	if(!(READ_BIT(GPIOA->IDR , 0)))	// если пин в нуле то 1 
-		{
-			dt_result = 1; // датчик есть
-		}
-	else{
-			dt_result = 0; // датчика нет
-		}
+	
+	dt_result = !(READ_BIT(GPIOA->IDR , 0)); // если пин в нуле то 1 
+		_delay_us(200);
+
 
 	return dt_result;
 }
@@ -38,17 +36,27 @@ uint8_t ds18_search()
 
 void ds18_send(uint8_t data)
 {
+	PA0_OUTPUT;
 
 	for(uint8_t i=0; i<8; i++)
 	{
-	PA0_OUTPUT;
-	CLEAR_BIT(GPIOA->ODR, 0); 
-		_delay_us(2);
+	CLEAR_BIT(GPIOA->ODR, 0); // down
+				_delay_us(1);
 
+		if (data & 0x01)
+			{
+				_delay_us(14);
 
-	if (data & 0x01) SET_BIT(GPIOA->ODR , 0);//подняли линию - отправился 1 
-		_delay_us(70);
-	// линию не подняли  - отправился 0 
+			SET_BIT(GPIOA->ODR , 0);//подняли линию - отправился 1 
+				_delay_us(45);
+
+			} 
+
+		else{
+			_delay_us(45);	// линию не подняли  - отправился 0 
+			// линию не подняли  - отправился 0 
+			SET_BIT(GPIOA->ODR , 0);//подняли линию перед след слотом-  1 
+			}
 
 	data >>=1; // сдвинули под следующий бит
 	}
@@ -62,27 +70,27 @@ uint8_t ds18_read()
 uint8_t data =0;
 uint8_t bit;
 
+
+
   for(uint8_t i=0; i<8; i++)
 	{
-		PA0_OUTPUT;
-		CLEAR_BIT(GPIOA->ODR, 0); 
-			_delay_us(2);
-		SET_BIT(GPIOA->ODR , 0);
+		PA0_OUTPUT; // master pulse
+		CLEAR_BIT(GPIOA->ODR, 0); //down
+			_delay_us(1);
+//		SET_BIT(GPIOA->ODR , 0); //up
+
+		PA0_INPUT; // read slave
 			_delay_us(15);
-
-		PA0_INPUT;
-		if(READ_BIT(GPIOA->IDR , 0)) 
-			{
-			bit = 0x1; 
-			}
-		else 
-			{
-			bit = 0x0; 
-			}
-
-		_delay_us(45);
+		
+		bit = READ_BIT(GPIOA->IDR , 0);
 		data |= (bit<<i); // запись полученного бита в байт
+			_delay_us(45);
+
+		SET_BIT(GPIOA->ODR , 0); //конец слота - up
+
 	}	 
+
+
 
   return data;
 	
@@ -99,7 +107,7 @@ uint8_t MS_bit;
 	{
 		ds18_send(NOID);
 		ds18_send(CONVERT);
-			_delay_ms(800); 
+			_delay_ms(750); 
 
 		ds18_search();
 		ds18_send(NOID);
@@ -108,11 +116,15 @@ uint8_t MS_bit;
 		LS_bit = ds18_read();
 		MS_bit = ds18_read();
 		temp = (MS_bit <<8) | LS_bit;
-
+		
+		usart1_send_byte((char)LS_bit);
+		usart1_send_byte((char)MS_bit);
+		usart1_send_byte('\n');
 	}
 	else
 	{
 			temp = 0;
+
 	}
 
 return temp;

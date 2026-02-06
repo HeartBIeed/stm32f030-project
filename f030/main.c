@@ -70,11 +70,24 @@ int main(void)
 	GPIOA->ODR |= (1 << 5); // PA5 en relay
 	usart1_send_str("UART EN");
 
+int16_t temp_ds = 0;
+char data_ds[32];
+
  while( 1 )
 	{
 
 
 	AHT_to_uart();
+	_delay_ms(500);
+
+	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
+	usart1_send_str(data_ds);
+_delay_ms(500);
+
+	temp_ds = ds18_get() ;
+	sprintf(data_ds,"DS = %u \n\r",temp_ds);
+	usart1_send_str(data_ds);
+
 	_delay_ms(500);
 
 
