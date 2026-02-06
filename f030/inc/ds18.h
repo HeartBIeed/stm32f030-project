@@ -20,7 +20,7 @@ void ds18_init();
 uint8_t ds18_search();
 uint8_t ds18_read();
 void ds18_send(uint8_t data);
-uint32_t ds18_get();
+int16_t ds18_get();
 
 
 #endif /* DS18_H_ */
