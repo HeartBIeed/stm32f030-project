@@ -59,7 +59,7 @@ void GPIO()
 int main(void)
 {
 
-	SystemClock_HSE_8MHz();
+	SystemClock_HSI_8MHz();
 	SysTick_init();
 
 	I2C_init( );
@@ -77,8 +77,8 @@ char data_ds[32];
 	{
 
 
-	AHT_to_uart();
-	_delay_ms(500);
+//	AHT_to_uart();
+//	_delay_ms(500);
 
 	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
 	usart1_send_str(data_ds);
