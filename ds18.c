@@ -18,15 +18,15 @@ uint8_t ds18_search()
 	uint8_t dt_result;
 
 	PA0_OUTPUT; // пин на выход
-	CLEAR_BIT(GPIOA->ODR, 0); // опускаем в 0
+	CLEAR_BIT(GPIOA->ODR, 1<<0); // опускаем в 0
 		_delay_us(480);
-	SET_BIT(GPIOA->ODR , 0); // поднимаем в 1
-		_delay_us(30);
+	SET_BIT(GPIOA->ODR , 1<<0); // поднимаем в 1
+		_delay_us(35); 
 
 	PA0_INPUT;  // пин на вход
 	
-	dt_result = !(READ_BIT(GPIOA->IDR , 0)); // если пин в нуле то 1 
-		_delay_us(200);
+	dt_result = !(READ_BIT(GPIOA->IDR , 1<<0)); // если пин в нуле то 1 
+		_delay_us(240);
 
 
 	return dt_result;
@@ -40,22 +40,21 @@ void ds18_send(uint8_t data)
 
 	for(uint8_t i=0; i<8; i++)
 	{
-	CLEAR_BIT(GPIOA->ODR, 0); // down
+	CLEAR_BIT(GPIOA->ODR, 1<<0); // down
 				_delay_us(1);
 
 		if (data & 0x01)
 			{
-				_delay_us(14);
+				_delay_us(15);
 
-			SET_BIT(GPIOA->ODR , 0);//подняли линию - отправился 1 
+			SET_BIT(GPIOA->ODR , 1<<0);//подняли линию - отправился 1 
 				_delay_us(45);
 
 			} 
 
 		else{
 			_delay_us(45);	// линию не подняли  - отправился 0 
-			// линию не подняли  - отправился 0 
-			SET_BIT(GPIOA->ODR , 0);//подняли линию перед след слотом-  1 
+			SET_BIT(GPIOA->ODR , 1<<0);//подняли линию перед след слотом-  1 
 			}
 
 	data >>=1; // сдвинули под следующий бит
@@ -75,18 +74,18 @@ uint8_t bit;
   for(uint8_t i=0; i<8; i++)
 	{
 		PA0_OUTPUT; // master pulse
-		CLEAR_BIT(GPIOA->ODR, 0); //down
+		CLEAR_BIT(GPIOA->ODR, 1<<0); //down
 			_delay_us(1);
-//		SET_BIT(GPIOA->ODR , 0); //up
+		SET_BIT(GPIOA->ODR , 1<<0); //up
 
 		PA0_INPUT; // read slave
 			_delay_us(15);
 		
-		bit = READ_BIT(GPIOA->IDR , 0);
+		bit = READ_BIT(GPIOA->IDR , 1<<0);
 		data |= (bit<<i); // запись полученного бита в байт
 			_delay_us(45);
 
-		SET_BIT(GPIOA->ODR , 0); //конец слота - up
+		SET_BIT(GPIOA->ODR , 1<<0); //конец слота - up
 
 	}	 
 

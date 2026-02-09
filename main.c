@@ -56,16 +56,19 @@ void GPIO()
 
 }
 
+
 int main(void)
 {
 
 	SystemClock_HSI_8MHz();
 	SysTick_init();
+	
+	GPIO();
 
 	I2C_init( );
 	UART_init(9600);
-
-	GPIO();
+	ds18_init();
+	
 
 	GPIOA->ODR |= (1 << 5); // PA5 en relay
 	usart1_send_str("UART EN");
@@ -73,22 +76,25 @@ int main(void)
 int16_t temp_ds = 0;
 char data_ds[32];
 
+
+
  while( 1 )
 	{
 
 
-//	AHT_to_uart();
-//	_delay_ms(500);
+	AHT_to_uart();
+	_delay_ms(500);
 
 	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
 	usart1_send_str(data_ds);
-_delay_ms(500);
+	_delay_ms(500);
 
-	temp_ds = ds18_get() ;
+/*	temp_ds = ds18_get();
 	sprintf(data_ds,"DS = %u \n\r",temp_ds);
 	usart1_send_str(data_ds);
 
-	_delay_ms(500);
+_delay_ms(500);
+*/	
 
 
 	}
