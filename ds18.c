@@ -19,9 +19,7 @@ uint8_t ds18_search()
 
 	PA0_OUTPUT; // пин на выход
 	CLEAR_BIT(GPIOA->ODR, 0); // опускаем в 0
-		_delay_us(480);
-	SET_BIT(GPIOA->ODR , 0); // поднимаем в 1
-		_delay_us(30);
+		_delay_us(500);
 
 	PA0_INPUT;  // пин на вход
 	
@@ -86,7 +84,7 @@ uint8_t bit;
 		data |= (bit<<i); // запись полученного бита в байт
 			_delay_us(45);
 
-		SET_BIT(GPIOA->ODR , 0); //конец слота - up
+//		SET_BIT(GPIOA->ODR , 0); //конец слота - up
 
 	}	 
 
@@ -124,6 +122,7 @@ uint8_t MS_bit;
 	else
 	{
 			temp = 0;
+		
 
 	}
 

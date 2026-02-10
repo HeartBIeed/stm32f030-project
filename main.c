@@ -56,6 +56,7 @@ void GPIO()
 
 }
 
+
 int main(void)
 {
 
@@ -79,7 +80,8 @@ char data_ds[32];
 
 //	AHT_to_uart();
 //	_delay_ms(500);
-
+	echo();
+	/*
 	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
 	usart1_send_str(data_ds);
 _delay_ms(500);
@@ -90,7 +92,7 @@ _delay_ms(500);
 
 	_delay_ms(500);
 
-
+*/
 	}
 }
 

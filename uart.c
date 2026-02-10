@@ -54,19 +54,19 @@ void usart1_send_str(char *str) // TX string
 
 uint8_t usart1_recieve_byte()
 	{
-//		while ((USART1->ISR & USART_ISR_RXNE) == 0);
 		if (USART1->ISR & USART_ISR_RXNE) 
 			{
 				return (uint8_t)USART1->RDR;
 			}
-return 0;
+	return 0;
 	}
 
 
+void echo()
+	{
 
-
-
-
-
-
-
+	if (USART1->ISR & USART_ISR_RXNE) 
+		{
+			usart1_send_str((char *)USART1->RDR);
+		}
+	}
