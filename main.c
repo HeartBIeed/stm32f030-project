@@ -82,9 +82,16 @@ char data_ds[32];
 	{
 
 
+<<<<<<< HEAD
 	AHT_to_uart();
 	_delay_ms(500);
 
+=======
+//	AHT_to_uart();
+//	_delay_ms(500);
+	echo();
+	/*
+>>>>>>> 199da966384f9ea92f8a3e410588d959c2f46c6a
 	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
 	usart1_send_str(data_ds);
 	_delay_ms(500);
@@ -96,7 +103,7 @@ char data_ds[32];
 _delay_ms(500);
 */	
 
-
+*/
 	}
 }
 

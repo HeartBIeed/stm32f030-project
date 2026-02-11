@@ -1,5 +1,4 @@
-Учебные программы по STM32 
+STM32F030K6T6
 
-https://controllerstech.com/stm32-registers
+![alt text](https://github.com/HeartBIeed/stm32f030-project/blob/main/f030.PNG)
 
-https://narodstream.ru/stm-urok-165-biblioteka-cmsis-stm32f1-begushhie-ogni
