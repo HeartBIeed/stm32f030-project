@@ -1,4 +1,4 @@
-#include "dht11.h"
+#include "dht22.h"
 
 void dht_request() //start down-up
 	{
@@ -18,9 +18,9 @@ void dht_response(void) //ответ - ждем up-down-up
 	{
 
 		GPIOA->MODER &= ~( 3 << (4*2)); // inp 4
-		while (READ_BIT(GPIOA->IDR, 4)); // ожидание 1
-		while ((READ_BIT(GPIOA->IDR,4))==0); // ожидание 0
-		while (READ_BIT(GPIOA->IDR,4));
+		while (READ_BIT(GPIOA->IDR, 1<<4)); // ожидание 1
+		while ((READ_BIT(GPIOA->IDR,1<<4))==0); // ожидание 0
+		while (READ_BIT(GPIOA->IDR,1<<4));
 	usart1_ptr_str("response");
 
 	}
@@ -28,28 +28,28 @@ void dht_response(void) //ответ - ждем up-down-up
 uint8_t dht_receive_data() //получаем байт
 	{
 	
-	uint8_t c =0;
+	uint8_t data =0;
 
 	for (int i = 0; i < 8; i++)
 		{
 
-		while ((READ_BIT(GPIOA->IDR,4))==0); // ждем появления 1. пока 0 - не выходим из цикла
+		while ((READ_BIT(GPIOA->IDR,1<<4))==0); // ждем появления 1. пока 0 - не выходим из цикла
 			
 		_delay_us(40);			
 
-		if (READ_BIT(GPIOA->IDR, 4)) // если пин в 1 более 30 мс
+		if (READ_BIT(GPIOA->IDR, 1<<4)) // если пин в 1 более 30 мс
 			{
-				c=(c<<1)|(0x01); // то сдвиг влево и пишем в конец 1
+				data =(c<<1)|(0x01); // то сдвиг влево и пишем в конец 1
 			}
 		else 
 			{
-				c=(c<<1); // то сдвиг влево. в конце 0
+				data =(c<<1); // то сдвиг влево. в конце 0
 			}
 
 		}
 	usart1_ptr_str("receive_data");
 
-	return c;
+	return data;
 	}
 
 void dht_write_data(char* data)
@@ -88,16 +88,7 @@ int main(void)
 	
 }
 
-//	sprintf(data, "RH:%d.%d % T:%d.%dC", I_RH, D_RH, I_TEMP, D_TEMP);
-
-/*
-	dht_request();
-	dht_response();
-	I_RH = dht_receive_data(); // целая часть
-	D_RH = dht_receive_data(); // дробная*//*
-	I_TEMP = dht_receive_data();
-	D_TEMP = dht_receive_data();
+sprintf(data, "RH:%d.%d % T:%d.%dC", I_RH, D_RH, I_TEMP, D_TEMP);
 
 
 */
-
