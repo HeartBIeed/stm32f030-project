@@ -1,0 +1,3 @@
+dma.c:2:6:DMA_init	8	static
+dma.c:11:6:dma_uart1_tx	16	static
+dma.c:34:6:dma_uart1_rx	16	static
