@@ -1,3 +1,2 @@
-main.c:3:6:AHT_to_uart	80	static
-main.c:44:6:GPIO	8	static
-main.c:60:5:main	48	static
+main.c:3:6:GPIO	8	static
+main.c:19:5:main	48	static
