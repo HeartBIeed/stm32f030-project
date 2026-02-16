@@ -26,7 +26,6 @@ int main(void)
 	GPIO();
 	usart1_send_str("UART EN");
 
-//uint16_t temp_ds = 0;
 char data_ds[32];
 
  while( 1 )
@@ -37,13 +36,9 @@ char data_ds[32];
 	usart1_send_str(data_ds);
 		_delay_ms(10);
 
-
-
 	sprintf(data_ds,"DS = %u \n\r",ds18_get() /16 );
 	usart1_send_str(data_ds);
 		_delay_ms(500);
-
-
 
 	}
 }

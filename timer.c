@@ -29,6 +29,6 @@ void _delay_ms(uint32_t ms)
 
 void _delay_us(uint32_t us)
 {
-    us *= 8; // 8 тактов на 1 мкс при 8 МГц
+    us *= 1; 
     while(us--) __NOP();
 }

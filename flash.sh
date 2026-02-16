@@ -2,7 +2,7 @@
 
 ####### Настройки ###########
 interfaceCfg="interface/stlink.cfg"
-targetCfg="target/stm32f1x.cfg"
+targetCfg="target/stm32f0x.cfg"
 firmware="build/main.hex"
 #############################
 

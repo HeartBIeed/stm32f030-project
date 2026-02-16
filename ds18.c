@@ -21,11 +21,11 @@ uint8_t ds18_search()
 	PA0_OUTPUT; 							// пин на выход
 
 		CLEAR_BIT(GPIOA->ODR, 1<<0); 			// опускаем в 0
-			_delay_us(48); 						// */20
+			_delay_us(480); 						// */20
 
 	PA0_INPUT; 								 // пин на вход
 			
-			_delay_us(4); 						// ждем время после отпуска шины
+			_delay_us(40); 						// ждем время после отпуска шины
 		
 
 		if (READ_BIT(GPIOA->IDR ,1<<0)==0) 		// ответ датчика через 40 мкс
@@ -35,7 +35,7 @@ uint8_t ds18_search()
 				presence = 0;
 			}
 
-			_delay_us(25); 						// ждем время отпуска шины датчиком
+			_delay_us(250); 						// ждем время отпуска шины датчиком
 		
 		if (READ_BIT(GPIOA->IDR ,1<<0)==1) 		// проверка возврата в 1 через 250 мкс
 			{
@@ -70,10 +70,10 @@ void ds18_send(uint8_t data)
 			PA0_OUTPUT;
 				CLEAR_BIT(GPIOA->ODR, 1<<0); // down
 				
-				__NOP();__NOP();__NOP(); //костыль /2 us
+				__NOP();__NOP();__NOP();__NOP();
 
 			PA0_INPUT; //подняли линию - отправился 1 
-				_delay_us(5);
+				_delay_us(40);
 			} 
 
 		else
@@ -82,7 +82,7 @@ void ds18_send(uint8_t data)
 			PA0_OUTPUT;
 				CLEAR_BIT(GPIOA->ODR, 1<<0); 
 
-				_delay_us(6);	
+				_delay_us(50);	
 			PA0_INPUT; 
 
 			}
@@ -103,18 +103,20 @@ uint8_t ds18_read()
 			PA0_OUTPUT; 
 			CLEAR_BIT(GPIOA->ODR, 1<<0); //down
 			
-			__NOP();__NOP();__NOP(); //2 us
+			__NOP();__NOP();__NOP();__NOP();
 
-			PA0_INPUT; 
-			_delay_us(2); // 20 мкс
+						PA0_INPUT; 
+
+			_delay_us(10); // 20 мкс
 
 			if (READ_BIT(GPIOA->IDR ,1<<0)==1) 
 				{	
 					data |= 1<<i; // 1
+					_delay_us(25); // 40 мкс
 
 				} else {
 
-					_delay_us(6);
+					_delay_us(40);
 
 				}
 
@@ -125,7 +127,6 @@ uint8_t ds18_read()
 
 int16_t ds18_get()
 	{
-		char data_ds[32]; //******отладка **************
 
 	int16_t temp;
 	uint8_t LS_bit;
@@ -143,14 +144,7 @@ int16_t ds18_get()
 
 			LS_bit = ds18_read();
 			MS_bit = ds18_read();
-//***********************************************************
-			sprintf(data_ds,"1 = %u \n\r",LS_bit);
-			usart1_send_str(data_ds);
 
-			sprintf(data_ds,"2 = %u \n\r",MS_bit);
-			usart1_send_str(data_ds);
-
-//***********************************************************
 			temp = (MS_bit <<8) | LS_bit;
 
 		}
