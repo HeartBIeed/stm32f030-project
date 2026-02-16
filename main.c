@@ -26,26 +26,35 @@ int main(void)
 
 	I2C_init();
 	UART_init(9600);
-	DMA_init();
+//	DMA_init();
 	GPIO();
+	ds18_init();
 
-	GPIOA->ODR |= (1 << 5); // PA5 en relay
 	usart1_send_str("UART EN");
 
-//int16_t temp_ds = 0;
-//char data_ds[32];
-uint8_t string[] = "dma string \n\r";
+char data_ds[32];
+//uint8_t string[] = "dma string \n\r";
 
  while( 1 )
 	{
 
-	dma_uart1_tx(string, strlen((char*)string));
-	_delay_ms(500);
+//dma_uart1_tx(string, strlen((char*)string));
+//	_delay_ms(500);
 
 	AHT_to_uart();
 	_delay_ms(500);
 
-	echo();
+
+	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
+	usart1_send_str(data_ds);
+		_delay_ms(10);
+
+	sprintf(data_ds,"DS = %u \n\r",ds18_get() /16 );
+	usart1_send_str(data_ds);
+		_delay_ms(500);
+
+
+//	echo();
 
 	}
 }

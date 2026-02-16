@@ -8,9 +8,7 @@
 
 #include "main.h"
 
-#define NOID 0xCC //Пропустить идентификацию
-#define CONVERT 0x44 //Старт измерения температуры
-#define READ_DATA 0xBE //Передача байтов ведущему
+
 
 
 #define PA0_INPUT 	(GPIOA->MODER &= ~(0x03)) // PA0 input 
