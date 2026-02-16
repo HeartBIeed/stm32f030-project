@@ -28,26 +28,21 @@ int main(void)
 
 //uint16_t temp_ds = 0;
 char data_ds[32];
-		PA0_INPUT; 
 
  while( 1 )
 	{
 
-		if (READ_BIT(GPIOA->IDR ,1<<0)) 	usart1_send_str("1");
-		usart1_send_str("0");
-		_delay_ms(100);
 
-/*
 	sprintf(data_ds,"SRCH = %u \n\r",ds18_search());
 	usart1_send_str(data_ds);
 		_delay_ms(10);
 
 
 
-	sprintf(data_ds,"DS = %u \n\r",ds18_get());
+	sprintf(data_ds,"DS = %u \n\r",ds18_get() /16 );
 	usart1_send_str(data_ds);
 		_delay_ms(500);
-*/
+
 
 
 	}
