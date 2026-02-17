@@ -10,6 +10,9 @@ void ds18_init()
 
 	}
 
+// Задержки подогнанны на лог анализаторе
+// NOP и Delay мкс нужно отладить под чатоту микроконтроллера
+// согласно комментариям напротив задержек
 
 uint8_t ds18_search()
 	{
@@ -18,26 +21,24 @@ uint8_t ds18_search()
 	uint8_t presence;
 	uint8_t bus_high;
 
-	PA0_OUTPUT; 							// пин на выход
+	PA0_OUTPUT; 
+		CLEAR_BIT(GPIOA->ODR, 1<<0); // прижимаем к нулю шину
+			_delay_us(480); 						
 
-		CLEAR_BIT(GPIOA->ODR, 1<<0); 			// опускаем в 0
-			_delay_us(480); 						// */20
-
-	PA0_INPUT; 								 // пин на вход
-			
-			_delay_us(40); 						// ждем время после отпуска шины
+	PA0_INPUT; // отпускаем шину
+			_delay_us(40); // ждем время после отпуска шины
 		
 
-		if (READ_BIT(GPIOA->IDR ,1<<0)==0) 		// ответ датчика через 40 мкс
+		if (READ_BIT(GPIOA->IDR ,1<<0)==0) 	// ответ датчика через 40 мкс
 			{
-				presence = 1;
+				presence = 1; // есть ответ
 			} else {
 				presence = 0;
 			}
 
-			_delay_us(250); 						// ждем время отпуска шины датчиком
+			_delay_us(250); // ждем время отпуска шины датчиком
 		
-		if (READ_BIT(GPIOA->IDR ,1<<0)==1) 		// проверка возврата в 1 через 250 мкс
+		if (READ_BIT(GPIOA->IDR ,1<<0)==1) // проверка возврата в 1 через 250 мкс
 			{
 				bus_high = 1;
 			} else {
@@ -52,7 +53,9 @@ uint8_t ds18_search()
 			}
 
 
-	return dt_result; 							// результат - отработка датчика
+	return dt_result; 
+	// результат - 1 отработка датчика
+	// при постоянном прижатии или отпуске - 0
 	}
 
 
@@ -68,22 +71,22 @@ void ds18_send(uint8_t data)
 			{
 
 			PA0_OUTPUT;
-				CLEAR_BIT(GPIOA->ODR, 1<<0); // down
+			CLEAR_BIT(GPIOA->ODR, 1<<0);
 				
-				__NOP();__NOP();__NOP();__NOP();
+				__NOP();__NOP();__NOP();__NOP(); // 2 мкс
 
 			PA0_INPUT; //подняли линию - отправился 1 
-				_delay_us(40);
+				_delay_us(40); // 50 мкс
 			} 
 
 		else
 			{
 			
 			PA0_OUTPUT;
-				CLEAR_BIT(GPIOA->ODR, 1<<0); 
+				CLEAR_BIT(GPIOA->ODR, 1<<0); // прижали шину к 0 и держим
 
-				_delay_us(50);	
-			PA0_INPUT; 
+				_delay_us(50); // 60 мкс
+			PA0_INPUT; // отпустили шину
 
 			}
 
@@ -101,22 +104,21 @@ uint8_t ds18_read()
 			{
 
 			PA0_OUTPUT; 
-			CLEAR_BIT(GPIOA->ODR, 1<<0); //down
+			CLEAR_BIT(GPIOA->ODR, 1<<0); 
 			
-			__NOP();__NOP();__NOP();__NOP();
+				__NOP();__NOP();__NOP();__NOP(); // 2 мкс
 
-						PA0_INPUT; 
-
-			_delay_us(10); // 20 мкс
+			PA0_INPUT; 
+				_delay_us(10); // 20 мкс
 
 			if (READ_BIT(GPIOA->IDR ,1<<0)==1) 
 				{	
-					data |= 1<<i; // 1
+					data |= 1<<i; // пишем 1 бит по индексу цикла
 					_delay_us(25); // 40 мкс
 
 				} else {
 
-					_delay_us(40);
+					_delay_us(40); // 60 мкс
 
 				}
 
@@ -132,13 +134,13 @@ int16_t ds18_get()
 	uint8_t LS_bit;
 	uint8_t MS_bit;
 
-		if (ds18_search())
+		if (ds18_search()) // сброс перед отправкой + проверка датчика
 		{
 			ds18_send(0xCC); //SKIP ROM
 			ds18_send(0x44); // CONVERT T
-				_delay_ms(750); 
+				_delay_ms(750); // задержка на замер температуры
 
-			ds18_search(); //reset
+			ds18_search(); // сброс перед отправкой 
 			ds18_send(0xCC); //SKIP ROM
 			ds18_send(0xBE); //READ SCRATCHPAD
 

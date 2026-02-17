@@ -17,7 +17,7 @@ void GPIO()
 int main(void)
 {
 
-	SystemClock_HSI_8MHz();
+	SystemClock_HSE_8MHz();
 	SysTick_init();
 
 	I2C_init( );
