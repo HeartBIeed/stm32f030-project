@@ -9,12 +9,13 @@
 #include "main.h"
 
 void UART_init(uint16_t speed);
-void usart1_send_byte(char tx_data);
-void usart1_send_str(char *str);
-uint8_t usart1_recieve_byte();
+void usart1_send_byte(char tx_data); // отправка байта
+void usart1_send_str(char *str); // отправка строки - принимаем строковый массив
+void USART1_IRQHandler(); // обработчик прерывания
 void echo();
 
-extern volatile uint8_t uart1_flag;
-
+extern volatile uint8_t data_buffer[32]; //буффер uart
+extern volatile uint8_t index_buffer;
+extern volatile uint8_t usart1_flag;
 
 #endif /* UART_H_ */

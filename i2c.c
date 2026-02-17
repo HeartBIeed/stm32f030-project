@@ -68,8 +68,8 @@ void I2C_write_byte(int addr,uint8_t* data,int nbytes)
 
 			}
 
-while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
-I2C1->ICR = I2C_ICR_STOPCF; //clear 
+	while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
+	I2C1->ICR = I2C_ICR_STOPCF; //clear 
 
 	}
 
@@ -90,8 +90,9 @@ void I2C_read_byte(int addr,uint8_t* data,int len)
 				while (!(I2C1->ISR & I2C_ISR_RXNE)); //wait transmit
 				data[i] = I2C1->RXDR; // read 
 			}
-while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
-I2C1->ICR = I2C_ICR_STOPCF; //clear 
+			
+	while (!(I2C1->ISR & I2C_ISR_STOPF)); //wait stop
+	I2C1->ICR = I2C_ICR_STOPCF; //clear 
 
 	}
 
@@ -101,42 +102,42 @@ I2C1->ICR = I2C_ICR_STOPCF; //clear
 
 
 int I2C_check_address(int addr)
-{
-
-//clear errors
-I2C1->ICR = (1<<4)|(1<<5)|(1<<8)|(1<<9);
-
-		I2C1->CR2 = 0; 
-		
-		I2C1->CR2 |= (0 << 16); //nbytes
-		I2C1->CR2 |= (1 << 25); //autoend
-		I2C1->CR2 |= (addr << 1); // set slave address
-		I2C1->CR2 |= (1 << 13); //start 
-
-timeout = TIMEOUT;
-while (!(I2C1->ISR & (I2C_ISR_NACKF | I2C_ISR_STOPF | I2C_ISR_TC))) //wait NACK STOPF TC
 	{
-		if (--timeout == 0) return 0; //none ack
+
+	//clear errors
+	I2C1->ICR = (1<<4)|(1<<5)|(1<<8)|(1<<9);
+
+			I2C1->CR2 = 0; 
+			
+			I2C1->CR2 |= (0 << 16); //nbytes
+			I2C1->CR2 |= (1 << 25); //autoend
+			I2C1->CR2 |= (addr << 1); // set slave address
+			I2C1->CR2 |= (1 << 13); //start 
+
+	timeout = TIMEOUT;
+	while (!(I2C1->ISR & (I2C_ISR_NACKF | I2C_ISR_STOPF | I2C_ISR_TC))) //wait NACK STOPF TC
+		{
+			if (--timeout == 0) return 0; //none ack
+		}
+
+	if (I2C1->ISR & I2C_ISR_NACKF) // if nack
+		{
+		        I2C1->ICR = I2C_ICR_NACKCF | I2C_ICR_STOPCF; //clear flags
+		        return 0; // no device
+
+		}
+
+
+	 timeout = TIMEOUT;
+	while (!(I2C1->ISR & I2C_ISR_STOPF )) // wait STOPF 
+		{
+			if (--timeout == 0) break;
+		}
+
+	I2C1->ICR = I2C_ICR_STOPCF; //clear stopf
+	return 1; 
+
 	}
-
-if (I2C1->ISR & I2C_ISR_NACKF) // if nack
-	{
-	        I2C1->ICR = I2C_ICR_NACKCF | I2C_ICR_STOPCF; //clear flags
-	        return 0; // no device
-
-	}
-
-
- timeout = TIMEOUT;
-while (!(I2C1->ISR & I2C_ISR_STOPF )) // wait STOPF 
-	{
-		if (--timeout == 0) break;
-	}
-
-I2C1->ICR = I2C_ICR_STOPCF; //clear stopf
-return 1; 
-
-}
 
 
 void I2C_scan()

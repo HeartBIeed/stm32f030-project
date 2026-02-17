@@ -1,5 +1,0 @@
-uart.c:6:6:UART_init	16	static
-uart.c:34:6:usart1_send_byte	16	static
-uart.c:42:6:usart1_send_str	16	static
-uart.c:55:9:usart1_recieve_byte	8	static
-uart.c:65:6:echo	8	static
