@@ -15,10 +15,11 @@
 #include "rcc.h"
 #include "uart.h"
 #include "timer.h"
-#include "ds18.h"
+//#include "ds18.h"
 #include "i2c.h"
-#include "aht20.h"
+//#include "aht20.h"
 #include "dma.h"
+#include "rtc.h"
 
 
 #endif /* MAIN_H_ */

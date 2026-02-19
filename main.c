@@ -28,19 +28,31 @@ int main(void)
 	UART_init(9600);
 //	DMA_init();
 	GPIO();
-	ds18_init();
+//	ds18_init();
+	RTC_init();
 
 	usart1_send_str("UART EN");
 
 char data_ds[32];
 //uint8_t string[] = "dma string \n\r";
+uint8_t hour;
+uint8_t min;
+RTC_set_time(17,06);
 
  while( 1 )
 	{
 
+
+	RTC_get_time(&hour,&min);
+	sprintf(data_ds,"Time: %02u:%02u \n\r",hour,min); // %02 /0- дополнить нулем /2 ширина
+	usart1_send_str(data_ds);
+		_delay_ms(900);
+
+
+
 //dma_uart1_tx(string, strlen((char*)string));
 //	_delay_ms(500);
-
+/*
 	AHT_to_uart();
 	_delay_ms(500);
 
@@ -52,7 +64,7 @@ char data_ds[32];
 	sprintf(data_ds,"DS = %u \n\r",ds18_get() /16 );
 	usart1_send_str(data_ds);
 		_delay_ms(500);
-
+*/
 
 //	echo();
 
